@@ -53,13 +53,36 @@
 
 						$query="SELECT * FROM customer where customer_id='".$user_name."' and pwd='".$pass_word."'";
 						$result123 = mysqli_query($dbc,$query);
-                        if(mysql_num_rows($result123) == 1){
+						$final = mysqli_num_rows($result123);
+                        if($final >0){
                             echo "you logined bro!!";
+								echo "Logged in <br>";
+								$_SESSION['login_user']=$user_name;
+								echo $_SESSION['login_user']." is logged in";
+								header("location: customer_homepage.php");
+							
                         }
                         else{
                             echo "shit man!!";
+							echo "Login Error";
+							session_destroy();
+							header('location:login_page.php?msg=failed');
                         }
                     }
+
+					else if($user_type=='Administrator'){
+						DEFINE('DB_USER','root');
+                        DEFINE('DB_PASSWORD','');
+                        DEFINE('DB_HOST','localhost');
+                        DEFINE('DB_NAME','flightjet');
+    
+                        $dbc=mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME)
+                        OR dies('Could not connect to MySQL:' .
+                            mysqli_connect_error());
+							$query="SELECT * FROM customer where customer_id='".$user_name."' and pwd='".$pass_word."'";
+
+					}
+
                 }
             }
                         // $stmt=mysqli_prepare($dbc,$query);
@@ -74,21 +97,21 @@
 						$response=@mysqli_query($dbc,$query);
 						echo $affected_rows;
 						*/
-			// 			if($cnt==1)
-			// 			{
-			// 				echo "Logged in <br>";
-			// 				$_SESSION['login_user']=$user_name;
-			// 				echo $_SESSION['login_user']." is logged in";
-			// 				header("location: customer_homepage.php");
-			// 			}
+						// if($cnt==1)
+						// {
+						// 	echo "Logged in <br>";
+						// 	$_SESSION['login_user']=$user_name;
+						// 	echo $_SESSION['login_user']." is logged in";
+						// 	header("location: customer_homepage.php");
+						// }
 			// 			else
 			// 			{
-			// 				echo "Login Error";
-			// 				session_destroy();
-			// 				header('location:login_page.php?msg=failed');
+							// echo "Login Error";
+							// session_destroy();
+							// header('location:login_page.php?msg=failed');
 			// 			}
 			// 		}
-			// 		else if($user_type=='Administrator')
+					// else if($user_type=='Administrator')
 			// 		{
 			// 			// require_once('Database Connection file/mysqli_connect.php');
             //             DEFINE('DB_USER','root');
