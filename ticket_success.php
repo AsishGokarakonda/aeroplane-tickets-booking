@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<title>
-			Cancel Booked Tickets
+			Ticket Booking Successful
 		</title>
 		<style>
 			input {
@@ -17,7 +17,7 @@
 				color: white;
     			border-radius: 4px;
     			padding: 7px 45px;
-    			margin: 0px 68px
+    			margin: 0px 127px
 			}
 		</style>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
@@ -37,31 +37,11 @@
 				<li><a href="logout_handler.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
 			</ul>
 		</div>
-		<form action="cancel_booked_tickets_form_handler.php" method="post">
-			<h2>CANCEL BOOKED TICKETS</h2>
-			<?php
-				if(isset($_GET['msg']) && $_GET['msg']=='failed')
-				{
-					echo "<strong style='color: red'>*Invalid PNR, please enter PNR again</strong>
-						<br>
-						<br>";
-				}
-			?>
-			<table cellpadding="5" style="padding-left: 30px;">
-				<tr>
-					<td class="fix_table">Enter the PNR</td>
-				</tr>
-				<tr>
-					<td class="fix_table"><input type="text" name="pnr" required></td>
-				</tr>
-			</table>
-			<br>
-			<input type="submit" value="Cancel Ticket" name="Cancel_Ticket">
-		</form>
+		<h2>BOOKING SUCCESSFUL</h2>
+		<h3>Your payment of &#x20b9; <?php echo $_SESSION['total_amount']; ?> has been received.<br><br> Your PNR is <strong><?php echo $_SESSION['pnr'];?></strong>. Your tickets have been booked successfully.</h3>
 		<!--Following data fields were empty!
 			...
 			ADD VIEW FLIGHT DETAILS AND VIEW JETS/ASSETS DETAILS for ADMIN
-			PREDEFINED LOCATION WHEN BOOKING TICKETS
 		-->
 	</body>
 </html>

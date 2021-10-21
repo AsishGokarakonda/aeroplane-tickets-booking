@@ -133,10 +133,9 @@
                     OR dies('Could not connect to MySQL:' .
                         mysqli_connect_error());
 
-                    $query="SELECT * FROM customer where customer_id='".$user_name."' and pwd='".$pass_word."'";
-                    $result123 = mysqli_query($dbc,$query);
-                    $final = mysqli_num_rows($result123);
-                    
+                    // $query="SELECT * FROM customer where customer_id='".$user_name."' and pwd='".$pass_word."'";
+                    // $result123 = mysqli_query($dbc,$query);
+                    // $final = mysqli_num_rows($result123);
 					if($class=="economy")
 					{
 						$query="SELECT flight_no,from_city,to_city,departure_date,departure_time,arrival_date,arrival_time,price_economy FROM Flight_Details where from_city=? and to_city=? and departure_date=? and seats_economy>=? ORDER BY  departure_time";
