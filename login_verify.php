@@ -29,18 +29,25 @@
 				if(empty($_POST['user_type']))
 				{
 					$data_missing[]='User Type';
+					echo "ok";
 				}
 				else
 				{
 					$user_type=$_POST['user_type'];
+					echo $user_type;
 					$_SESSION['user_type']=$user_type;
 				}
 
-
+echo "HI Friends";
+echo $user_name;
+echo $pass_word;
+echo empty($data_missing);
 				if(empty($data_missing))
 				{
+					echo "outside";
 					if($user_type=='Customer')
 					{
+						echo "entered into customer";
 						// require_once('Database Connection file/mysqli_connect.php');
                         DEFINE('DB_USER','root');
                         DEFINE('DB_PASSWORD','');
@@ -84,6 +91,7 @@
 					}
 
                 }
+
             }
                         // $stmt=mysqli_prepare($dbc,$query);
 						// mysqli_stmt_bind_param($stmt,"ss",$user_name,$pass_word);
