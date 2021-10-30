@@ -15,17 +15,17 @@
 				$flight_no=$_SESSION['flight_no'];
 				$journey_date=$_SESSION['journey_date'];
 				$class=$_SESSION['class'];
-				$booking_status="PENDING";
+				$booking_status="CONFIRMED";
 				$no_of_pass=$_SESSION['no_of_pass'];
-				$lounge_access=$_POST['lounge_access'];
-				$priority_checkin=$_POST['priority_checkin'];
-				$insurance=$_POST['insurance'];
+				// $lounge_access=$_POST['lounge_access'];
+				// $priority_checkin=$_POST['priority_checkin'];
+				// $insurance=$_POST['insurance'];
 				$total_no_of_meals=0;
 				$_SESSION['pnr']=$pnr;
 
-				$_SESSION['lounge_access']=$lounge_access;
-				$_SESSION['priority_checkin']=$priority_checkin;
-				$_SESSION['insurance']=$insurance;
+				// $_SESSION['lounge_access']=$lounge_access;
+				// $_SESSION['priority_checkin']=$priority_checkin;
+				// $_SESSION['insurance']=$insurance;
 
 				$payment_id=NULL;
 				$customer_id=$_SESSION['login_user'];
@@ -61,26 +61,29 @@
 				mysqli_stmt_close($stmt);
 				$ff_mileage=$ticket_price/10;
 
-				$query="INSERT INTO Ticket_Details (pnr,date_of_reservation,flight_no,journey_date,class,booking_status,no_of_passengers,lounge_access,priority_checkin,insurance,payment_id,customer_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
-				$stmt=mysqli_prepare($dbc,$query);
-				mysqli_stmt_bind_param($stmt,"ssssssisssss",$pnr,$date_of_res,$flight_no,$journey_date,$class,$booking_status,$no_of_pass,$lounge_access,$priority_checkin,$insurance,$payment_id,$customer_id);
-				mysqli_stmt_execute($stmt);
-				$affected_rows=mysqli_stmt_affected_rows($stmt);
-				echo $affected_rows.'<br>';
+				$query="INSERT INTO Ticket_Details (pnr,date_of_reservation,flight_no,journey_date,class,booking_status,no_of_passengers,payment_id,customer_id) VALUES ($pnr,$date_of_res,$flight_no,$journey_date,$class,$booking_status,$no_of_pass,$payment_id,$customer_id)";
+				$result12 = mysqli_query($dbc,$query);
+				echo $result12;
+				// $stmt=mysqli_prepare($dbc,$query);
+				// mysqli_stmt_bind_param($stmt,"ssssssiss",$pnr,$date_of_res,$flight_no,$journey_date,$class,$booking_status,$no_of_pass,$payment_id,$customer_id);
+				// mysqli_stmt_execute($stmt);
+				// $affected_rows=mysqli_stmt_affected_rows($stmt);
+				// echo $affected_rows.'<br>';
+				
 				// mysqli_stmt_bind_result($stmt,$cnt);
 				// mysqli_stmt_fetch($stmt);
 				// echo $cnt;
 				/*
 				$response=@mysqli_query($dbc,$query);
 				*/
-				if($affected_rows==1)
+				if($result12)
 				{
 					echo "Successfully Submitted<br>";
 				}
 				else
 				{
 					echo "Submit Error";
-					echo mysqli_error();
+					echo mysqli_error($dbc);
 				}
 				
 				for($i=1;$i<=$no_of_pass;$i++)

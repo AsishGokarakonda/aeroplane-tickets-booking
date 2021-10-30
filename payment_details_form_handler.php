@@ -18,9 +18,9 @@
 				$total_amount=$_SESSION['total_amount'];
 				$payment_date=$_SESSION['payment_date'];
 				$payment_mode=$_POST['payment_mode'];	
-				$lounge_acce = $_SESSION['lounge_access'];
-				$priority_check = $_SESSION['priority_checkin']	;	
-				$insurance_check = $_SESSION['insurance'];
+				// $lounge_acce = $_SESSION['lounge_access'];
+				// $priority_check = $_SESSION['priority_checkin']	;	
+				// $insurance_check = $_SESSION['insurance'];
 				$booking_sta ="CONFIRMED";
 				$customer_id=$_SESSION['login_user'];
 				// require_once('Database Connection file/mysqli_connect.php');
@@ -42,7 +42,7 @@
 					// echo $affected_rows_1.'<br>';
 					// mysqli_stmt_close($stmt);
 					// $query1="INSERT INTO `Ticket_Details` (`pnr`,`date_of_reservation`,`flight_no`,`journey_date`,`class`,`booking_status`,`no_of_passengers`,`priority_checkin`,`payment_id`) VALUES ('$pnr','$payment_date','$flight_no','$journey_date','$class','$booking_sta','$no_of_pass','$priority_check','$payment_id')";
-					$query1="INSERT INTO `Ticket_Details` (`pnr`,`date_of_reservation`,`flight_no`,`journey_date`,`class`,`booking_status`,`no_of_passengers`,`lounge_access`,`priority_checkin`,`insurance`,`payment_id`,`customer_id`) VALUES ('$pnr','$payment_date','$flight_no','$journey_date','$class','$booking_sta','$no_of_pass','$lounge_acce','$priority_check','$insurance_check','$payment_id','$customer_id')";
+					$query1="INSERT INTO `Ticket_Details` (`pnr`,`date_of_reservation`,`flight_no`,`journey_date`,`class`,`booking_status`,`no_of_passengers`,`payment_id`,`customer_id`) VALUES ('$pnr','$payment_date','$flight_no','$journey_date','$class','$booking_sta','$no_of_pass','$payment_id','$customer_id')";
 					$resultquery1 = mysqli_query($dbc,$query1);
 					if($resultquery1){
                         echo "created rey1";
@@ -66,7 +66,7 @@
 					// $affected_rows_1=mysqli_stmt_affected_rows($stmt);
 					// echo $affected_rows_1.'<br>';
 					// mysqli_stmt_close($stmt);
-					$query2="INSERT INTO `Ticket_Details` (`pnr`,`date_of_reservation`,`flight_no`,`journey_date`,`class`,`booking_status`,`no_of_passengers`,`lounge_access`,`priority_checkin`,`insurance`,`payment_id`,`customer_id`) VALUES ('$pnr','$payment_date','$flight_no','$journey_date','$class','$booking_sta','$no_of_pass','$lounge_acce','$priority_check','$insurance_check','$payment_id','$customer_id')";
+					$query2="INSERT INTO `Ticket_Details` (`pnr`,`date_of_reservation`,`flight_no`,`journey_date`,`class`,`booking_status`,`no_of_passengers`,`payment_id`,`customer_id`) VALUES ('$pnr','$payment_date','$flight_no','$journey_date','$class','$booking_sta','$no_of_pass','$payment_id','$customer_id')";
 					$resultquery2 = mysqli_query($dbc,$query2);
 					if($resultquery2){
                         echo "created rey2";

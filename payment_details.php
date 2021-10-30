@@ -83,32 +83,32 @@
 				mysqli_close($dbc);
 				$total_ticket_price=$no_of_pass*$ticket_price;
 				$total_meal_price=250*$total_no_of_meals;
-				if($_SESSION['insurance']=='yes')
-				{
-					$total_insurance_fee=100*$no_of_pass;
-				}
-				else
-				{
-					$total_insurance_fee=0;
-				}
-				if($_SESSION['priority_checkin']=='yes')
-				{
-					$total_priority_checkin_fee=200*$no_of_pass;
-				}
-				else
-				{
-					$total_priority_checkin_fee=0;
-				}
-				if($_SESSION['lounge_access']=='yes')
-				{
-					$total_lounge_access_fee=300*$no_of_pass;
-				}
-				else
-				{
-					$total_lounge_access_fee=0;
-				}
+				// if($_SESSION['insurance']=='yes')
+				// {
+				// 	$total_insurance_fee=100*$no_of_pass;
+				// }
+				// else
+				// {
+				// 	$total_insurance_fee=0;
+				// }
+				// if($_SESSION['priority_checkin']=='yes')
+				// {
+				// 	$total_priority_checkin_fee=200*$no_of_pass;
+				// }
+				// else
+				// {
+				// 	$total_priority_checkin_fee=0;
+				// }
+				// if($_SESSION['lounge_access']=='yes')
+				// {
+				// 	$total_lounge_access_fee=300*$no_of_pass;
+				// }
+				// else
+				// {
+				// 	$total_lounge_access_fee=0;
+				// }
 				$total_discount=0;
-				$total_amount=$total_ticket_price+$total_meal_price+$total_insurance_fee+$total_priority_checkin_fee+$total_lounge_access_fee+$total_discount;
+				$total_amount=$total_ticket_price+$total_meal_price+$total_discount; //$total_insurance_fee+$total_priority_checkin_fee+$total_lounge_access_fee;
 				$_SESSION['total_amount']=$total_amount;
 
 				echo "<table cellpadding=\"5\"	style='margin-left: 50px'>";
@@ -122,20 +122,20 @@
 				echo "<td class=\"fix_table\">&#x20b9; ".$total_meal_price."</td>";
 				echo "</tr>";
 
-				echo "<tr>";
-				echo "<td class=\"fix_table\">Priority Checkin Fees:</td>";
-				echo "<td class=\"fix_table\">&#x20b9; ".$total_priority_checkin_fee."</td>";
-				echo "</tr>";
+				// echo "<tr>";
+				// echo "<td class=\"fix_table\">Priority Checkin Fees:</td>";
+				// echo "<td class=\"fix_table\">&#x20b9; ".$total_priority_checkin_fee."</td>";
+				// echo "</tr>";
 
-				echo "<tr>";
-				echo "<td class=\"fix_table\">Lounge Access Fees:</td>";
-				echo "<td class=\"fix_table\">&#x20b9; ".$total_lounge_access_fee."</td>";
-				echo "</tr>";
+				// echo "<tr>";
+				// echo "<td class=\"fix_table\">Lounge Access Fees:</td>";
+				// echo "<td class=\"fix_table\">&#x20b9; ".$total_lounge_access_fee."</td>";
+				// echo "</tr>";
 
-				echo "<tr>";
-				echo "<td class=\"fix_table\">Insurance Fees:</td>";
-				echo "<td class=\"fix_table\">&#x20b9; ".$total_insurance_fee."</td>";
-				echo "</tr>";
+				// echo "<tr>";
+				// echo "<td class=\"fix_table\">Insurance Fees:</td>";
+				// echo "<td class=\"fix_table\">&#x20b9; ".$total_insurance_fee."</td>";
+				// echo "</tr>";
 
 				echo "<tr>";
 				echo "<td class=\"fix_table\">Discount:</td>";
