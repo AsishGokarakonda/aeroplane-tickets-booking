@@ -192,19 +192,19 @@
             </div>
             <div class="row">
                <div class="col-md-4">
-                  <div class="Our_box">
+                  <div class="Our_box" style="background-color:#9cece8;">
                      <i><img src="./Formcss/Images/flightseats.jpg" alt="#"/></i>
                      <h4>See The Available Flights As Per  Your Requirement</h4>
-					 <a href="#" class="btn btn-primary" style="margin-top:20px">Search Now</a>
+					 <a href="#" class="btn btn-primary" style="margin-top:20px;">Search Now</a>
                   </div>
-                  <div class="Our_box">
+                  <div class="Our_box" style="background-color:#ff1a1a;" >
                      <i><img src="./Formcss/Images/cancelbooking.jpg" alt="#"/></i>
                      <h4>Cancel Booked tickets</h4>
 					 <a href="cancel_booked_tickets.php" class="btn btn-primary" style="margin-top:20px">Cancel Now</a>
                   </div>
                </div>
                <div class="col-md-4">
-                  <div class="Our_box">
+                  <div class="Our_box" style="background-color:#fdfd37;">
                      <i><img src="./Formcss/Images/reservationConfirm.jpg" alt="#"/></i>
                      <h4>Book flight tickets</h4>
 					 <a href="book_tickets.php" class="btn btn-primary" style="margin-top:20px">Book Now</a>
@@ -212,7 +212,7 @@
                </div>
                
                <div class="col-md-4">
-                  <div class="Our_box">
+                  <div class="Our_box" style="background-color:#ee7ab5;">
                      <i><img src="./Formcss/Images/printticket.jpg" alt="#"/></i>
                      <h4>Print the ticket</h4>
 					 <a href="pnr.php" class="btn btn-primary" style="margin-top:20px">Print Now</a>
