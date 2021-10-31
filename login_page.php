@@ -173,10 +173,10 @@
                        <div class="col-md-12">
 					   <input class="contactus" type="password" name="password" placeholder="Enter your password" required>                        
                        </div>
-					   <strong style="color:f6c2d7;">User Type:</strong>
-			 <span style="color:f6c2d7;">Customer</span>	 <input  type='radio' name='user_type' value='Customer' checked/>
+					   <strong style="color:#f6c2d7;">User Type:</strong>
+			 <span style="color:#f6c2d7;">Customer</span>	 <input  type='radio' name='user_type' value='Customer' checked/>
 				<br>
-				<span style="color:f6c2d7;">Administrator </span> <input style="color:f6c2d7;" type='radio' name='user_type' value='Administrator'/>
+				<span style="color:#f6c2d7;">Administrator </span> <input style="color:f6c2d7;" type='radio' name='user_type' value='Administrator'/>
 
                        <div class="col-sm-12">
 					   <input class="send_btn" type="submit" name="Login" value="Login">
