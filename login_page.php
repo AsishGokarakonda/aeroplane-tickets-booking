@@ -89,7 +89,7 @@
 </html> -->
 
 
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
    <head>
       <!-- basic -->
@@ -131,7 +131,7 @@
                     <div class="collapse navbar-collapse" id="navbarsExample04">
                        <ul class="navbar-nav mr-auto">
                           <li class="nav-item">
-                             <a class="nav-link" href="index.html">Home</a>
+                             <a class="nav-link" href="index.php">Home</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" href="aboutus.html">About Us</a>
@@ -206,4 +206,4 @@
 <script src="Formjs/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="Formjs/custom.js"></script>
 <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-</html> -->
+</html> 

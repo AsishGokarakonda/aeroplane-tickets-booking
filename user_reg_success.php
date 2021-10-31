@@ -45,17 +45,19 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled">Contact us</a>
+                <a class="nav-link ">About us</a>
               </li>
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+
           </div>
         </div>
       </nav>
-		<h3>New user successfully registered! Login into your account to book tickets.</h3>
+      <div style="text-align:center;margin-top:25px;color:#e63882">
+      <h3>You Have Registered Successfully ! </h3>
+    <h3>Now,Go to Loginpage And Enter Your Passenger ID (Username),Password You Have Given Previously</h3>
+      </div>
+      
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-	</body>
+
+		</body>
 </html>

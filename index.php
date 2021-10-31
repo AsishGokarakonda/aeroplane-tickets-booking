@@ -103,6 +103,9 @@
             <li class="nav-item">
               <a href="login_page.php" class="nav-link">Login</a>
             </li>
+            <li class="nav-item">
+              <a href="new_user.php" class="nav-link">Sign Up</a>
+            </li>
           </ul>
         </div>
       </div> <!-- .container -->
