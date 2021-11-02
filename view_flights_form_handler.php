@@ -26,49 +26,54 @@
 			 border: solid thin;
 			}
 		</style>
-		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+ <link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+
+<link rel="stylesheet" href="./assets/vendor/animate/animate.css">
+
+<link rel="stylesheet" href="./assets/vendor/owl-carousel/css/owl.carousel.css">
+
+<link rel="stylesheet" href="./assets/vendor/fancybox/css/jquery.fancybox.css">
+
+<link rel="stylesheet" href="./assets/css/theme.css">
 	</head>
 	<body>
-		<img class="logo" src="images/shutterstock_22.jpg"/> 
+		<!-- <img class="logo" src="images/shutterstock_22.jpg"/> 
 		<h1 id="title">
 			FLIGHTJET AIRLINES
-		</h1>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+		</h1> -->
+		<header>
+<nav class="navbar navbar-expand-lg navbar-light " >
+      <div class="container">
+        <a href="index.php" class="navbar-brand">Flight<span class="text-primary">jet</span></a>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <span class="nav-link active" >Flightjet</span>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="index.php">Home</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Login
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="login.php">Login</a></li>
-                  <li><a class="dropdown-item" href="new_user.php">Sign up</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Log out</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Contact us</a>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarContent">
+          <ul class="navbar-nav ml-auto pt-3 pt-lg-0">
+            <li class="nav-item active">
+              <a href="customer_homepage.php" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item disabled">
+              <a href="index.php" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="login_page.php" class="nav-link">Login</a>
+            </li>
+            <li class="nav-item">
+              <a href="new_user.php" class="nav-link">Sign Up</a>
+            </li>
+          </ul>
+          <div class="sign_btn" style="margin-left:40px"><a href="#"><img src="./Formcss/Images/profileIcon2.png" alt=""></a></div>
         </div>
-      </nav>
-		<h2>AVAILABLE FLIGHTS</h2>
+      </div> <!-- .container -->
+    </nav> <!-- .navbar -->
+    </header>
+		<h2 style="color:red;text-align:center;margin-top:25px;font-weight:501">AVAILABLE FLIGHTS</h2>
 		<?php
 			if(isset($_POST['Search']))
 			{
@@ -151,19 +156,22 @@
 						else
 						{
 							echo "<form action=\"book_tickets2.php\" method=\"post\">";
-							echo "<table cellpadding=\"10\"";
-							echo "<tr><th>Flight No.</th>
-							<th>Origin</th>
-							<th>Destination</th>
-							<th>Departure Date</th>
-							<th>Departure Time</th>
-							<th>Arrival Date</th>
-							<th>Arrival Time</th>
-							<th>Price(Economy)</th>
-							<th>Select</th>
+							echo "<table cellpadding=\"10\" style=\" display:block ruby;text-align:center;\"";
+							echo "<tr >
+							<th style=\"color:#0070ff;\">Flight No.</th>
+							<th style=\"color:#0070ff;\">Origin</th>
+							<th style=\"color:#0070ff;\">Destination</th>
+							<th style=\"color:#0070ff;\">Departure Date</th>
+							<th style=\"color:#0070ff;\">Departure Time</th>
+							<th style=\"color:#0070ff;\">Arrival Date</th>
+							<th style=\"color:#0070ff;\">Arrival Time</th>
+							<th style=\"color:#0070ff;\">Price(Economy)</th>
+							<th style=\"color:#0070ff;\">Select</th>
 							</tr>";
 							while(mysqli_stmt_fetch($stmt)) {
-        						echo "<tr>
+        						echo "<div>
+								<tr>
+								
         						<td>".$flight_no."</td>
         						<td>".$from_city."</td>
 								<td>".$to_city."</td>
@@ -173,10 +181,11 @@
 								<td>".$arrival_time."</td>
 								<td>&#x20b9; ".$price_economy."</td>
 								<td><input type=\"radio\" name=\"select_flight\" value=\"".$flight_no."\"></td>
-        						</tr>";
+        						</tr>
+								</div>";
     						}
     						echo "</table> <br>";
-    						echo "<input type=\"submit\" value=\"Select Flight\" name=\"Select\">";
+    						echo "<input class=\"btn btn-primary px-5\" style=\"display:block;margin:auto;\" type=\"submit\" value=\"Select Flight\" name=\"Select\">";
     						echo "</form>";
     					}
 					}

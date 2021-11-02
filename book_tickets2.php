@@ -33,48 +33,53 @@
     			padding: 6.5px 15px;
 			}
 		</style>
-		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		 <link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+
+<link rel="stylesheet" href="./assets/vendor/animate/animate.css">
+
+<link rel="stylesheet" href="./assets/vendor/owl-carousel/css/owl.carousel.css">
+
+<link rel="stylesheet" href="./assets/vendor/fancybox/css/jquery.fancybox.css">
+
+<link rel="stylesheet" href="./assets/css/theme.css">
 	</head>
 	<body>
-		<img class="logo" src="images/shutterstock_22.jpg"/> 
-		<h1 id="title">
+		<!-- <img class="logo" src="images/shutterstock_22.jpg"/>  -->
+		<!-- <h1 id="title">
 			AADITH AIRLINES
-		</h1>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+		</h1> -->
+		<header>
+<nav class="navbar navbar-expand-lg navbar-light " >
+      <div class="container">
+        <a href="index.php" class="navbar-brand">Flight<span class="text-primary">jet</span></a>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <span class="nav-link active" >Flightjet</span>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="index.php">Home</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Login
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="login.php">Login</a></li>
-                  <li><a class="dropdown-item" href="new_user.php">Sign up</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Log out</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Contact us</a>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarContent">
+          <ul class="navbar-nav ml-auto pt-3 pt-lg-0">
+            <li class="nav-item active">
+              <a href="customer_homepage.php" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item disabled">
+              <a href="index.php" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="login_page.php" class="nav-link">Login</a>
+            </li>
+            <li class="nav-item">
+              <a href="new_user.php" class="nav-link">Sign Up</a>
+            </li>
+          </ul>
+          <div class="sign_btn" style="margin-left:40px"><a href="#"><img src="./Formcss/Images/profileIcon2.png" alt=""></a></div>
         </div>
-      </nav>
+      </div> <!-- .container -->
+    </nav> <!-- .navbar -->
+    </header>
 		<?php
 			$no_of_pass=$_SESSION['no_of_pass'];
 			$class=$_SESSION['class'];
@@ -82,36 +87,37 @@
 			$flight_no=$_POST['select_flight'];
 			$_SESSION['flight_no']=$flight_no;
 			//$pass_name=array();
-			echo "<h2>ADD PASSENGERS DETAILS</h2>";
+			echo "<h2 style=\"text-align: center;margin-top: 15px;margin-bottom:25px;color:#00b7ff;\">Please Fill The Passengers Details</h2>";
+			
 			echo "<form action=\"add_ticket_details_form_handler.php\" method=\"post\">";
 			while($count<=$no_of_pass)
 			{
-					echo "<p><strong>PASSENGER ".$count."<strong></p>";
-					echo "<table cellpadding=\"0\">";
+					echo "<p style=\"color:#ff0060;font-weight:501;margin-left:190px\">PASSENGER ".$count."</p>";
+					echo "<table cellpadding=\"0\" style=\"display:block ruby;text-align:center\">";
 					echo "<tr>";
-					echo "<td class=\"fix_table_short\">Passenger's Name</td>";
-					echo "<td class=\"fix_table_short\">Passenger's Age</td>";
-					echo "<td class=\"fix_table_short\">Passenger's Gender</td>";
-					echo "<td class=\"fix_table_short\">Passenger's Inflight Meal</td>";
-					echo "<td class=\"fix_table_short\">Passenger's Frequent Flier ID (if applicable)</td>";
+					echo "<td class=\"fix_table_short\" style=\"margin:5px 20px\">Name</td>";
+					echo "<td class=\"fix_table_short\" style=\"margin:5px 20px\">Age</td>";
+					echo "<td class=\"fix_table_short\" style=\"margin:5px 20px\">Gender</td>";
+					echo "<td class=\"fix_table_short\" style=\"display:block;margin:5px 20px\">Inflight Meal</td>";
+					echo "<td class=\"fix_table_short\" style=\"margin:5px 20px\">Frequent Flier ID (if applicable)</td>";
 					echo "</tr>";
 					echo "<tr>";
-					echo "<td class=\"fix_table_short\"><input type=\"text\" name=\"pass_name[]\" required></td>";
-					echo "<td class=\"fix_table_short\"><input type=\"number\" name=\"pass_age[]\" required></td>";
-					echo "<td class=\"fix_table_short\">";
-					echo "<select name=\"pass_gender[]\">";
+					echo "<td style=\"margin:5px 20px\" class=\"fix_table_short\"><input style=\"margin:5px 20px\" type=\"text\" name=\"pass_name[]\" required></td>";
+					echo "<td style=\"margin:5px 20px\" class=\"fix_table_short\"><input style=\"margin:5px 20px\" type=\"number\" name=\"pass_age[]\" required></td>";
+					echo "<td style=\"margin:5px 20px\" class=\"fix_table_short\">";
+					echo "<select style=\"margin:5px 20px\" name=\"pass_gender[]\">";
   					echo "<option value=\"male\">Male</option>";
   					echo "<option value=\"female\">Female</option>";
   					echo "<option value=\"other\">Other</option>";
   					echo "</select>";
   					echo "</td>";
-  					echo "<td class=\"fix_table_short\">";
+  					echo "<td style=\"margin:5px 20px\" class=\"fix_table_short\">";
 					echo "<select name=\"pass_meal[]\">";
   					echo "<option value=\"yes\">Yes</option>";
   					echo "<option value=\"no\">No</option>";
   					echo "</select>";
   					echo "</td>";
-  					echo "<td class=\"fix_table_short\"><input type=\"text\" name=\"pass_ff_id[]\"></td>";
+  					echo "<td style=\"margin:5px 20px\" class=\"fix_table_short\"><input type=\"text\" name=\"pass_ff_id[]\"></td>";
 					echo "</tr>";
 					echo "</table>";
 					echo "<br><hr>";
@@ -137,7 +143,7 @@
 				// echo "</tr>";
 				// echo "</table>";
 				// echo "<br><br>";
-				echo "<input type=\"submit\" value=\"Submit Travel/Ticket Details\" name=\"Submit\">";
+				echo "<input class=\"btn btn-primary px-5\" style=\"display:block;margin:auto\" type=\"submit\" value=\"Submit The Details\" name=\"Submit\">";
 				echo "</form>";
 		?>
 		<!--Following data fields were empty!
