@@ -77,7 +77,7 @@
                   <input list="destinations" name="destination" type="text" class="form-control" id="email" placeholder="To.." required>
                 </div>
 
-                <div class="col-4 py-2">
+                <div class="col-sm-6 py-2">
                   <label for="subject" style="color:#ff08b6;">Enter The Departure Date</label>
                   <!-- <input type="text" class="form-control" id="subject" placeholder="Subject.."> -->
                   <input type="date" class="form-control" style="text-align:center" name="dep_date" min=
@@ -95,21 +95,21 @@
 
                 <div class="col-sm-4 py-2">
                   <label for="email" style="color:#ff08b6;" >Enter Number Of Passengers</label>
-                  <input type="text" class="form-control" id="email" placeholder="Eg:3" type="number" name="no_of_pass" required>
+                  <input type="text" style="text-align:center;" class="form-control" id="email" placeholder="Eg:3" type="number" name="no_of_pass" required>
                 </div>
 
                 <div class="col-12 py-2">
                   <label for="message" style="color:#ff08b6;">Enter The Class</label>
                   <br>
                   <!-- <textarea id="message" rows="8" class="form-control" placeholder="Enter message.."></textarea> -->
-                  <select name="class" class="col-2 py-2 " style="text-align:center">
+                  <select name="class" class="col-sm-2 py-2 " style="text-align:center">
                   <option value="economy" >Economy</option>
                   <option value="business" >Business</option>
                   </select>
                 </div>
                 <div class="col-12 mt-3">
                 <!-- <input type="submit" value="Search for Available Flights" name="Search"> -->
-                  <button type="submit"  name="Search" class="btn btn-primary px-5" >Submit</button>
+                  <button type="submit" style="display:block;margin:auto"  name="Search" class="btn btn-primary px-5" >Submit</button>
                 </div>
               </div>
             </form>
