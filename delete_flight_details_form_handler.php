@@ -48,7 +48,7 @@
 					// mysqli_stmt_fetch($stmt);
 					// echo $cnt;
 					mysqli_stmt_close($stmt);
-					mysqli_close($dbc);
+					// mysqli_close($dbc);
 					/*
 					$response=@mysqli_query($dbc,$query);
 					*/
@@ -60,7 +60,7 @@
 					else
 					{
 						echo "Submit Error";
-						echo mysqli_error();
+						echo mysqli_error($dbc);
 						header("location: delete_flight_details.php?msg=failed");
 					}
 				}

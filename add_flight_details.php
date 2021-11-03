@@ -200,8 +200,8 @@
 				}
 			?>
         <div class="text-center" style="margin-top:-24px">
-          <h2 class="title-section mb-3">Book Your Tickets</h2>
-          <p style="color:red;">Fill The Below Form So That We Will Check If The Flights Are Available Or Not</p>
+          <h2 class="title-section mb-3">Add A New Flight </h2>
+          <p style="color:red;">Fill The Below Form To Add A New Flight</p>
         </div>
         <div class="row justify-content-center mt-5">
           <div class="col-lg-8">

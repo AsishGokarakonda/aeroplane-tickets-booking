@@ -1,47 +1,57 @@
 <?php
 	session_start();
 ?>
-<html>
-	<head>
-		<title>
-			View Booked Tickets
-		</title>
-		<style>
-			input {
-    			border: 1.5px solid #030337;
-    			border-radius: 4px;
-    			padding: 7px 30px;
-			}
-			input[type=submit] {
-				background-color: #030337;
-				color: white;
-    			border-radius: 4px;
-    			padding: 7px 45px;
-    			margin: 0px 390px
-			}
-			table {
-			 border-collapse: collapse; 
-			}
-			tr/*:nth-child(3)*/ {
-			 border: solid thin;
-			}
-		</style>
-		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Booked Tickets</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
-	</head>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+  
+  <link rel="stylesheet" href="./assets/css/maicons.css">
+
+  <link rel="stylesheet" href="./assets/vendor/animate/animate.css">
+
+  <link rel="stylesheet" href="./assets/vendor/owl-carousel/css/owl.carousel.css">
+
+  <link rel="stylesheet" href="./assets/vendor/fancybox/css/jquery.fancybox.css">
+
+  <link rel="stylesheet" href="./assets/css/theme.css">
+</head>
 	<body>
-		<img class="logo" src="images/shutterstock_22.jpg"/> 
-		<h1 id="title">
-			AADITH AIRLINES
-		</h1>
-		<div>
-			<ul>
-				<li><a href="admin_homepage.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-				<li><a href="admin_homepage.php"><i class="fa fa-desktop" aria-hidden="true"></i> Dashboard</a></li>
-				<li><a href="logout_handler.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
-			</ul>
-		</div>
-		<h2>LIST OF BOOKED TICKETS FOR THE FLIGHT</h2>
+	<header>
+<nav class="navbar navbar-expand-lg navbar-light " >
+      <div class="container">
+        <a href="index.php" class="navbar-brand">Flight<span class="text-primary">jet</span></a>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarContent">
+          <ul class="navbar-nav ml-auto pt-3 pt-lg-0">
+            <li class="nav-item active">
+              <a href="admin_homepage.php" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item disabled">
+              <a href="index.php" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="login_page.php" class="nav-link">Login</a>
+            </li>
+          </ul>
+          <div class="sign_btn" style="margin-left:40px"><a href="#"><img src="./Formcss/Images/profileIcon2.png" alt=""></a></div>
+        </div>
+      </div> <!-- .container -->
+    </nav> <!-- .navbar -->
+    </header>
+
+		<h2 style="text-align:center;margin-top:15px;color:#1dcb20">LIST OF BOOKED TICKETS FOR THE FLIGHT</h2>
 		<?php
 			if(isset($_POST['Submit']))
 			{
@@ -87,22 +97,23 @@
 					}
 					else
 					{
-						echo "<table cellpadding=\"10\"";
-						echo "<tr><th>PNR</th>
-						<th>Date of Reservation</th>
-						<th>Class</th>
-						<th>No. of Passengers</th>
-						<th>Payment ID</th>
-						<th>Customer ID</th>
+						echo "<table cellpadding=\"10\" style=\"display:block ruby;text-align:center;\"";
+						echo "<tr>
+						<th style=\"border:2px solid #880e0e\">PNR</th>
+						<th style=\"border:2px solid #880e0e\">Date of Reservation</th>
+						<th style=\"border:2px solid #880e0e\">Class</th>
+						<th style=\"border:2px solid #880e0e\">No. of Passengers</th>
+						<th style=\"border:2px solid #880e0e\">Payment ID</th>
+						<th style=\"border:2px solid #880e0e\">Customer ID</th>
 						</tr>";
 						while(mysqli_stmt_fetch($stmt)) {
         					echo "<tr>
-							<td>".$pnr."</td>
-							<td>".$date_of_reservation."</td>
-							<td>".$class."</td>
-							<td>".$no_of_passengers."</td>
-							<td>".$payment_id."</td>
-							<td>".$customer_id."</td>
+							<td  style=\"border:2px solid #880e0e\" >".$pnr."</td>
+							<td  style=\"border:2px solid #880e0e\"> ".$date_of_reservation."</td>
+							<td style=\"border:2px solid #880e0e\">".$class."</td>
+							<td style=\"border:2px solid #880e0e\">".$no_of_passengers."</td>
+							<td style=\"border:2px solid #880e0e\">".$payment_id."</td>
+							<td style=\"border:2px solid #880e0e\">".$customer_id."</td>
         					</tr>";
     					}
     					echo "</table> <br>";
@@ -129,5 +140,18 @@
 				echo "Submit request not received";
 			}
 		?>
+	
+		 <script src="Formjs/jquery.min.js"></script>
+    <script src="Formjs/popper.min.js"></script>
+    <script src="Formjs/bootstrap.bundle.min.js"></script>
+    <script src="Formjs/jquery-3.0.0.min.js"></script>
+    <script src="Formjs/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="Formjs/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="Formjs/custom.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+  
 	</body>
 </html>
+
+
