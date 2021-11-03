@@ -31,10 +31,20 @@ if(!$result){
   echo "The authors table was not created successfully because of this error ---> ". mysqli_error($conn);
 }
 
- $addtoAdmin = "INSERT INTO  `admin` (`admin_id`, `pwd`, `staff_id`, `name`, `email`) VALUES
-('admin', 'Admin#123', 'admin', 'AdminName', 'admin1234@gmail.com')";
+ $addtoAdmin = "INSERT INTO  `admin` (`admin_id`, `pwd`, `staff_id`, `name`, `email`)
+ SELECT * FROM(SELECT 'admin', 'Admin#123', 'adminID', 'AdminName', 'admin1234@gmail.com' ) As tmp
+WHERE NOT EXISTS(
+  SELECT `pwd` FROM `admin` WHERE pwd = 'Admin#123'
+) LIMIT 1";
+
 $result1 = mysqli_query($conn,$addtoAdmin);
- 
+
+$addFliDet = "INSERT INTO `Flight_details` (`flight_no`, `from_city`, `to_city`, `departure_date`, `arrival_date`, `departure_time`, `arrival_time`, `seats_economy`, `seats_business`, `price_economy`, `price_business`, `jet_id`) 
+SELECT * FROM (SELECT 'AA101', 'bangalore', 'mumbai', '2021-11-01', '2021-12-02', '21:00:00', '01:00:00', '195', '96', '5000', '7500', '10001') AS tmp
+WHERE NOT EXISTS(
+  SELECT `flight_no` FROM `Flight_details` WHERE flight_no ='AA101'
+)LIMIT 1";
+$result4 = mysqli_query($conn,$addFliDet);
 
 
 

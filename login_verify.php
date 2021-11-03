@@ -29,7 +29,7 @@
 				if(empty($_POST['user_type']))
 				{
 					$data_missing[]='User Type';
-					echo "ok";
+					// echo "ok";
 				}
 				else
 				{
@@ -38,10 +38,10 @@
 					$_SESSION['user_type']=$user_type;
 				}
 
-echo "HI Friends";
-echo $user_name;
-echo $pass_word;
-echo empty($data_missing);
+// echo "HI Friends";
+// echo $user_name;
+// echo $pass_word;
+// echo empty($data_missing);
 				if(empty($data_missing))
 				{
 					echo "outside";
@@ -86,8 +86,23 @@ echo empty($data_missing);
                         $dbc=mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME)
                         OR dies('Could not connect to MySQL:' .
                             mysqli_connect_error());
-							$query="SELECT * FROM customer where customer_id='".$user_name."' and pwd='".$pass_word."'";
-
+							$query="SELECT * FROM admin where admin_id='".$user_name."' and pwd='".$pass_word."'";
+							$result123 = mysqli_query($dbc,$query);
+							$final = mysqli_num_rows($result123);
+							if($final >0){
+								echo "you logined bro!!";
+									echo "Logged in <br>";
+									$_SESSION['login_user']=$user_name;
+									echo $_SESSION['login_user']." is logged in";
+									header("location:admin_homepage.php");
+								
+							}
+							else{
+								echo "shit man!!";
+								echo "Login Error";
+								session_destroy();
+								header('location:login_page.php?msg=failed');
+							}
 					}
 
                 }
