@@ -1,4 +1,4 @@
- <?php
+<?php
 	session_start();
 	if($_SESSION['login_user']==null){
 		header('location:home_page.php');
@@ -44,7 +44,6 @@
 		</h1>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
@@ -97,7 +96,6 @@
 				</td>
 			</tr>
 		</table>
-
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 	</body>
 </html> 
@@ -195,7 +193,7 @@
                   <div class="Our_box" style="background-color:#9cece8;">
                      <i><img src="./Formcss/Images/flightseats.jpg" alt="#"/></i>
                      <h4>See The Available Flights As Per  Your Requirement</h4>
-					 <a href="#" class="btn btn-primary" style="margin-top:20px;">Search Now</a>
+					 <a href="search_tickets_home.php" class="btn btn-primary" style="margin-top:20px;">Search Now</a>
                   </div>
                   <div class="Our_box" style="background-color:#ff1a1a;" >
                      <i><img src="./Formcss/Images/cancelbooking.jpg" alt="#"/></i>
