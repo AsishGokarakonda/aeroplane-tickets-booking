@@ -181,6 +181,10 @@
                           <input class="contactus" type="text" name="name" placeholder="Enter Your Full Name" required> 
                        </div>
                        <div class="col-md-12">
+					   <!-- <input type="text" name="address" required> -->
+					   <input class="contactus" type="text" name="passport"  placeholder="Enter Your passport number" required>                        
+                       </div>
+                       <div class="col-md-12">
 					   <!-- <input type="text" name="phone_no" required> -->
 					   <input class="contactus" type="text" name="phone_no" placeholder="Enter Your Phone Number" required>                        
                        </div>

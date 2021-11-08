@@ -56,9 +56,18 @@
 				{
 					$address=$_POST['address'];
 				}
+				if(empty($_POST['passport']))
+				{
+					$data_missing[]='passport';
+				}
+				else
+				{
+					$passport=$_POST['passport'];
+				}
 
 				if(empty($data_missing))
 				{
+					// echo"heelo";
                     DEFINE('DB_USER','root');
                     DEFINE('DB_PASSWORD','');
                     DEFINE('DB_HOST','localhost');
@@ -69,28 +78,21 @@
                         mysqli_connect_error());
 
 					// require_once('Database Connection file/mysqli_connect.php');
-					$query="INSERT INTO Customer (customer_id,pwd,name,email,phone_no,address) VALUES (?,?,?,?,?,?)";
-					$stmt=mysqli_prepare($dbc,$query);
-					mysqli_stmt_bind_param($stmt,"ssssss",$user_name,$password,$name,$email_id,$phone_no,$address);
-					mysqli_stmt_execute($stmt);
-					$affected_rows=mysqli_stmt_affected_rows($stmt);
-					//echo $affected_rows."<br>";
-					// mysqli_stmt_bind_result($stmt,$cnt);
-					// mysqli_stmt_fetch($stmt);
-					// echo $cnt;
-					mysqli_stmt_close($stmt);
-					mysqli_close($dbc);
-					/*
-					$response=@mysqli_query($dbc,$query);
-					*/
-					if($affected_rows==1)
+					$query="INSERT INTO `customer` (`customer_id`,`pwd`,`name`,`email`,`phone_no`,`address`,`passport`) VALUES ('$user_name','$password','$name','$email_id','$phone_no','$address','$passport')";
+					$result=mysqli_query($dbc,$query);
+					if ( false===$result ) {
+						printf("error: %s\n", mysqli_error($dbc));
+					  }
+
+					if($result==1)
 					{
 						header('location:user_reg_success.php');
 					}
 					else
 					{
 						echo "Submit Error";
-						echo mysqli_error();
+						echo mysqli_error($dbc);
+						mysqli_close($dbc);
 					}
 				}
 				else

@@ -164,7 +164,7 @@
                            </li>
 
                           </ul>
-                          <div class="sign_btn"><a href="#"><img src="./Formcss/Images/profileIcon2.png" alt=""></a></div>
+                          <div class="sign_btn"><a href="profileview.php"><img src="./Formcss/Images/profileIcon2.png" alt=""></a></div>
                        </div>
                     </nav>
                  </div>
@@ -216,7 +216,6 @@
 					 <a href="pnr.php" class="btn btn-primary" style="margin-top:20px">Print Now</a>
                   </div>
                </div>
-
             </div>
          </div>
       </div>
