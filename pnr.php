@@ -81,21 +81,53 @@ if($res0)
 ?>
 
 <html>
+        <title>Getting PNR</title>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link type="text/css" rel="stylesheet" href="css/login.css"></link>
         <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
          <link rel="stylesheet" href="bootstrap/bootstrap-theme.min.css">
-       <script src="bootstrap/jquery.min.js"></script>
-        <script src="bootstrap/bootstrap.min.js"></script>
+         <link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+  
+  <link rel="stylesheet" href="./assets/css/maicons.css">
 
-       
-        <title></title>
-        
-        
-        
+  <link rel="stylesheet" href="./assets/vendor/animate/animate.css">
+
+  <link rel="stylesheet" href="./assets/vendor/owl-carousel/css/owl.carousel.css">
+
+  <link rel="stylesheet" href="./assets/vendor/fancybox/css/jquery.fancybox.css">
+
+  <link rel="stylesheet" href="./assets/css/theme.css">
+       <script src="bootstrap/jquery.min.js"></script>
+        <script src="bootstrap/bootstrap.min.js"></script>  
     </head>
-    <body  style="background-image:url('./images/inbg.jpg');" >
+    <body>
+    <header>
+<nav class="navbar navbar-expand-lg navbar-light " >
+      <div class="container">
+        <a href="index.php" class="navbar-brand">Flight<span class="text-primary">jet</span></a>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarContent">
+          <ul class="navbar-nav ml-auto pt-3 pt-lg-0">
+            <li class="nav-item active">
+              <a href="customer_homepage.php" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item disabled">
+              <a href="aboutus.php" class="nav-link">About Us</a>
+            </li>
+          </ul>
+          <div class="sign_btn" style="margin-left:40px"><a href="profileview.php"><img src="./Formcss/Images/profileIcon2.png" alt=""></a></div>
+        </div>
+      </div> <!-- .container -->
+    </nav> <!-- .navbar -->
+    </header>
         <form id="index" action="pnr.php" method="post">
             
             <div class="container-fluid">    
@@ -104,15 +136,11 @@ if($res0)
                         
                   </div>
                  </div>    
-             
-        
-            
-            
                 <div  id="divtop">
                     <center>
                         <br> <br><br>
                             <div id="dmain"  > 
-                               <center><img src="./images/irctc.jpg" width="180px" height="150px" ></center>
+                               
                                 <br>
                                     <input type="text" id="u_id" name="pnr" class="form-control" style="width:300px; margin-left: 66px;" placeholder="Enter Your PNR Number"><br>
                                    

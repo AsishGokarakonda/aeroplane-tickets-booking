@@ -33,23 +33,21 @@
 		</style>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+
+<link rel="stylesheet" href="./assets/vendor/animate/animate.css">
+
+<link rel="stylesheet" href="./assets/vendor/owl-carousel/css/owl.carousel.css">
+
+<link rel="stylesheet" href="./assets/vendor/fancybox/css/jquery.fancybox.css">
+
+<link rel="stylesheet" href="./assets/css/theme.css">
 	</head>
 	<body>
-		<img class="logo" src="images/shutterstock_22.jpg"/> 
-		<h1 id="title">
-			AADITH AIRLINES
-		</h1>
-		<div>
-			<ul>
-				<li><a href="customer_homepage.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-				<li><a href="customer_homepage.php"><i class="fa fa-desktop" aria-hidden="true"></i> Dashboard</a></li>
-				<li><a href="aboutus.php"><i class="fa fa-plane" aria-hidden="true"></i> About Us</a></li>
-				<li><a href="home_page.php"><i class="fa fa-phone" aria-hidden="true"></i> Contact Us</a></li>
-				<li><a href="logout_handler.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
-			</ul>
-		</div>
-		<h2>VIEW BOOKED FLIGHT TICKETS</h2>
-		<h3 class='set_nice_size'><center><u>Upcoming Trips</u></center></h3>
+		
 		<?php
 			$todays_date=date('Y-m-d');
 			$thirty_days_before_date=date_create(date('Y-m-d'));
@@ -66,13 +64,36 @@
                 $dbc=mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME)
                 OR dies('Could not connect to MySQL:' .
                     mysqli_connect_error());
+			echo "
+			<header>
+			<nav class=\"navbar navbar-expand-lg navbar-light \" >
+				  <div class=\"container\">
+					<a href=\"index.php\" class=\"navbar-brand\">Flight<span class=\"text-primary\">jet</span></a>
+			
+					<button class=\"navbar-toggler\" data-toggle=\"collapse\" data-target=\"#navbarContent\" aria-controls=\"navbarContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+					  <span class=\"navbar-toggler-icon\"></span>
+					</button>
+			
+					<div class=\"navbar-collapse collapse\" id=\"navbarContent\">
+					  <ul class=\"navbar-nav ml-auto pt-3 pt-lg-0\">
+						<li class=\"nav-item active\">
+						  <a href=\"customer_homepage.php\" class=\"nav-link\">Home</a>
+						</li>
+						<li class=\"nav-item disabled\">
+						  <a href=\"aboutus.php\" class=\"nav-link\">About Us</a>
+						</li>
+					  </ul>
+					  <div class=\"sign_btn\" style=\"margin-left:40px\"><a href=\"profileview.php\"><img src=\"./Formcss/Images/profileIcon2.png\" alt=\"\"></a></div>
+					</div>
+				  </div> <!-- .container -->
+				</nav> <!-- .navbar -->
+				</header>";
 			$query="SELECT pnr,date_of_reservation,flight_no,journey_date,class,booking_status,no_of_passengers,payment_id FROM Ticket_Details where customer_id=? AND journey_date>=? AND booking_status='CONFIRMED' ORDER BY  journey_date";
 			$stmt=mysqli_prepare($dbc,$query);
 			mysqli_stmt_bind_param($stmt,"ss",$customer_id,$todays_date);
 			mysqli_stmt_execute($stmt);
 			mysqli_stmt_bind_result($stmt,$pnr,$date_of_reservation,$flight_no,$journey_date,$class,$booking_status,$no_of_passengers,$payment_id);
-			echo "pnr is ";
-			echo $pnr;
+
 			mysqli_stmt_store_result($stmt);
 			if(mysqli_stmt_num_rows($stmt)==0)
 			{
@@ -118,15 +139,15 @@
 			}
 			else
 			{
-				echo "<table cellpadding=\"10\"";
+				echo "<table cellpadding=\"10\" class=\"table\"";
 				echo "<tr><th>PNR</th>
-				<th>Date of Reservation</th>
-				<th>Flight No.</th>
-				<th>Journey Date</th>
-				<th>Class</th>
-				<th>Booking Status</th>
-				<th>No. of Passengers</th>
-				<th>Payment ID</th>
+				<th scope=\"col\" style=\"color:#0070ff;\">Date of Reservation</th>
+				<th scope=\"col\" style=\"color:#0070ff;\">Flight No.</th>
+				<th scope=\"col\" style=\"color:#0070ff;\">Journey Date</th>
+				<th scope=\"col\" style=\"color:#0070ff;\">Class</th>
+				<th scope=\"col\" style=\"color:#0070ff;\">Booking Status</th>
+				<th scope=\"col\" style=\"color:#0070ff;\">No. of Passengers</th>
+				<th scope=\"col\" style=\"color:#0070ff;\">Payment ID</th>
 				</tr>";
 				while(mysqli_stmt_fetch($stmt)) {
         			echo "<tr>

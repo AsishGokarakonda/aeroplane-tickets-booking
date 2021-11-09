@@ -28,10 +28,28 @@ $result = mysqli_query($con,"SELECT * FROM passengers WHERE pnr='".$_SESSION['us
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title></title>
+        <title>Print ticket</title>
         
          <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
          <link rel="stylesheet" href="bootstrap/bootstrap-theme.min.css">
+         <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+         <link rel="stylesheet" href="bootstrap/bootstrap-theme.min.css">
+         <link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+  
+  <link rel="stylesheet" href="./assets/css/maicons.css">
+
+  <link rel="stylesheet" href="./assets/vendor/animate/animate.css">
+
+  <link rel="stylesheet" href="./assets/vendor/owl-carousel/css/owl.carousel.css">
+
+  <link rel="stylesheet" href="./assets/vendor/fancybox/css/jquery.fancybox.css">
+
+  <link rel="stylesheet" href="./assets/css/theme.css">
+       <script src="bootstrap/jquery.min.js"></script>
+        <script src="bootstrap/bootstrap.min.js"></script>  
        <script src="bootstrap/jquery.min.js"></script>
         <script src="bootstrap/bootstrap.min.js"></script>
         <link type="text/css" rel="stylesheet" href="css/admform.css"></link>
@@ -48,7 +66,30 @@ $result = mysqli_query($con,"SELECT * FROM passengers WHERE pnr='".$_SESSION['us
         
         
     </head>
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br>
+    <body>
+    <header>
+<nav class="navbar navbar-expand-lg navbar-light " >
+      <div class="container">
+        <a href="index.php" class="navbar-brand">Flight<span class="text-primary">jet</span></a>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarContent">
+          <ul class="navbar-nav ml-auto pt-3 pt-lg-0">
+            <li class="nav-item active">
+              <a href="customer_homepage.php" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item disabled">
+              <a href="aboutus.php" class="nav-link">About Us</a>
+            </li>
+          </ul>
+          <div class="sign_btn" style="margin-left:40px"><a href="profileview.php"><img src="./Formcss/Images/profileIcon2.png" alt=""></a></div>
+        </div>
+      </div> <!-- .container -->
+    </nav> <!-- .navbar -->
+    </header>
 <center><h3>Airpot Authority of India</h3></center>
 <center><h2>Boarding Pass - Flight Reservation Slip</h2></center><h4><?php echo $booking_status;?></h4>
 <br>
@@ -80,10 +121,8 @@ $result = mysqli_query($con,"SELECT * FROM passengers WHERE pnr='".$_SESSION['us
 <td style="width:4%;"> <font style="font-family: Verdana;">No. of Passengers: </font> </td>
                     <td style="width:58%;" colspan="3"> <?php echo $no_of_passengers;?> </td>
 
-    <body>
-
-                 
-                
+    
+   
         </div>
 <!-- <center><img src='images/maxx.jpg' class='img-thumbnail' width='1200px' style='height:80px;'></center>"; -->
          
@@ -122,11 +161,7 @@ $result = mysqli_query($con,"SELECT * FROM passengers WHERE pnr='".$_SESSION['us
                     //   }
                    ?>
                         </td>
-                 </tr>   
 
-
-    
-                 
                  <tr>
                  <td style="width:4%;"> <font style="font-family: Verdana;">PNR : </font> </td>
                     <td style="width:8%;" colspan="3"> <?php echo $stname;?> </td>
@@ -150,12 +185,14 @@ $result = mysqli_query($con,"SELECT * FROM passengers WHERE pnr='".$_SESSION['us
                    </tr>
                  
                   <tr>
-                    <td> <font style="font-family: Verdana;">Meail Choice</font></td>
+                    <td> <font style="font-family: Verdana;">Meal Choice</font></td>
                     <td> <?php echo $row[5] ?></td>
+                </tr>
+                <tr>
                     <td><font style="font-family: Verdana;"> Frequent Flier No. (If any)</font></td>
                     <td> <?php echo $row[6] ?> </td>
-
-                  </tr>
+                    </tr>
+                  
                 
                 
                 

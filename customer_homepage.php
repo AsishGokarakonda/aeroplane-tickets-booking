@@ -106,6 +106,12 @@
                      <h4>Book flight tickets</h4>
 					 <a href="book_tickets.php" class="btn btn-primary" style="margin-top:20px">Book Now</a>
                   </div>
+                  
+                  <div class="Our_box" style="background-color:#16ec0f;">
+                     <i><img src="./Formcss/Images/viewTickets.jpeg" alt="#"/></i>
+                     <h4>View Booked flight tickets</h4>
+					 <a href="view_booked_tickets.php" class="btn btn-primary" style="margin-top:20px">View Now</a>
+                  </div>
                </div>
                
                <div class="col-md-4">

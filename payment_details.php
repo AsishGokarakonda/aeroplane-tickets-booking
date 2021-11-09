@@ -35,7 +35,7 @@
 	</head>
 	<body>
 	<header>
-<nav class="navbar navbar-expand-lg navbar-light " >
+<nav class="navbar navbar-expand-lg navbar-light " style="margin-bottom:30px" >
       <div class="container">
         <a href="index.php" class="navbar-brand">Flight<span class="text-primary">jet</span></a>
 
@@ -51,20 +51,14 @@
             <li class="nav-item disabled">
               <a href="aboutus.php" class="nav-link">About Us</a>
             </li>
-            <li class="nav-item">
-              <a href="login_page.php" class="nav-link">Login</a>
-            </li>
-            <li class="nav-item">
-              <a href="new_user.php" class="nav-link">Sign Up</a>
-            </li>
           </ul>
-          <div class="sign_btn" style="margin-left:40px"><a href="#"><img src="./Formcss/Images/profileIcon2.png" alt=""></a></div>
+          <div class="sign_btn" style="margin-left:40px"><a href="profileview.php"><img src="./Formcss/Images/profileIcon2.png" alt=""></a></div>
         </div>
       </div> <!-- .container -->
     </nav> <!-- .navbar -->
     </header>
-		<form style="text-align:center" action="payment_details_form_handler.php" method="post">
-			<h3 style="margin-left: 30px"><u>Payment Summary</u></h3>
+		<form action="payment_details_form_handler.php" method="post">
+			<h3 ><u>Payment Summary</u></h3>
 			<?php
 				$flight_no=$_SESSION['flight_no'];
 				$journey_date=$_SESSION['journey_date'];
@@ -108,30 +102,7 @@
 				mysqli_close($dbc);
 				$total_ticket_price=$no_of_pass*$ticket_price;
 				$total_meal_price=250*$total_no_of_meals;
-				// if($_SESSION['insurance']=='yes')
-				// {
-				// 	$total_insurance_fee=100*$no_of_pass;
-				// }
-				// else
-				// {
-				// 	$total_insurance_fee=0;
-				// }
-				// if($_SESSION['priority_checkin']=='yes')
-				// {
-				// 	$total_priority_checkin_fee=200*$no_of_pass;
-				// }
-				// else
-				// {
-				// 	$total_priority_checkin_fee=0;
-				// }
-				// if($_SESSION['lounge_access']=='yes')
-				// {
-				// 	$total_lounge_access_fee=300*$no_of_pass;
-				// }
-				// else
-				// {
-				// 	$total_lounge_access_fee=0;
-				// }
+
 				$total_discount=0;
 				$total_amount=$total_ticket_price+$total_meal_price+$total_discount; //$total_insurance_fee+$total_priority_checkin_fee+$total_lounge_access_fee;
 				$_SESSION['total_amount']=$total_amount;
@@ -178,7 +149,7 @@
 				echo "</table>";
 				echo "<hr style='margin-right:900px; margin-left: 50px'>";
 				echo "<br>";
-				echo "<p style=\"margin-left:50px\">Your Payment/Transaction ID is <strong>".$payment_id.".</strong> Please note it down for future reference.</p>";
+				echo "<p >Your Payment/Transaction ID is <strong>".$payment_id.".</strong> Please note it down for future reference.</p>";
 				echo "<br>";
 			?>
 			<table cellpadding="5" style='margin-left: 50px'>
