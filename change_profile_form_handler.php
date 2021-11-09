@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Add New User</title>
+		<title>Edited Message</title>
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -36,14 +36,8 @@
                     <li class=\"nav-item disabled\">
                       <a href=\"index.php\" class=\"nav-link\">About Us</a>
                     </li>
-                    <li class=\"nav-item\">
-                      <a href=\"login_page.php\" class=\"nav-link\">Login</a>
-                    </li>
-                    <li class=\"nav-item\">
-                      <a href=\"new_user.php\" class=\"nav-link\">Sign Up</a>
-                    </li>
                   </ul>
-                  <div class=\"sign_btn\" style=\"margin-left:40px\"><a href=\"#\"><img src=\"./Formcss/Images/profileIcon2.png\" alt=\"\"></a></div>
+                  <div class=\"sign_btn\" style=\"margin-left:40px\"><a href=\"profileview.php\"><img src=\"./Formcss/Images/profileIcon2.png\" alt=\"\"></a></div>
                 </div>
               </div> <!-- .container -->
             </nav> <!-- .navbar -->
@@ -126,7 +120,7 @@
 					  }
 					if($result==1)
 					{
-						echo "Changed Successfully";
+						echo "<h2 style=\"text-align: center;font-size: 50px;margin-top: 80px;color: #5cff00;\">Changed Successfully</h2>";
 					}
 					else
 					{

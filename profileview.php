@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Customer Profile</title>
     <style>
         body {
     background: rgb(99, 39, 120)
@@ -58,6 +58,17 @@
 }
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+  
+  <link rel="stylesheet" href="./assets/css/maicons.css">
+
+  <link rel="stylesheet" href="./assets/vendor/animate/animate.css">
+
+  <link rel="stylesheet" href="./assets/vendor/owl-carousel/css/owl.carousel.css">
+
+  <link rel="stylesheet" href="./assets/vendor/fancybox/css/jquery.fancybox.css">
+
+  <link rel="stylesheet" href="./assets/css/theme.css">
 
 </head>
 <body>
@@ -72,6 +83,30 @@
         printf("Connect failed: %s\n", mysqli_connect_error());
         exit();
       }
+      echo "
+      <header>
+      <nav class=\"navbar navbar-expand-lg navbar-light \" >
+            <div class=\"container\">
+              <a href=\"index.php\" class=\"navbar-brand\">Flight<span class=\"text-primary\">jet</span></a>
+      
+              <button class=\"navbar-toggler\" data-toggle=\"collapse\" data-target=\"#navbarContent\" aria-controls=\"navbarContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+                <span class=\"navbar-toggler-icon\"></span>
+              </button>
+      
+              <div class=\"navbar-collapse collapse\" id=\"navbarContent\">
+                <ul class=\"navbar-nav ml-auto pt-3 pt-lg-0\">
+                  <li class=\"nav-item active\">
+                    <a href=\"customer_homepage.php\" class=\"nav-link\">Home</a>
+                  </li>
+                  <li class=\"nav-item disabled\">
+                    <a href=\"index.php\" class=\"nav-link\">About Us</a>
+                  </li>
+                </ul>
+                <div class=\"sign_btn\" style=\"margin-left:40px\"><a href=\"profileview.php\"><img src=\"./Formcss/Images/profileIcon2.png\" alt=\"\"></a></div>
+              </div>
+            </div> <!-- .container -->
+          </nav> <!-- .navbar -->
+          </header>";
       $temp =$_SESSION['login_user'];
       $query="SELECT * FROM `customer` WHERE customer_id='".$temp."'";
       $result = mysqli_query($dbc, $query);
@@ -111,6 +146,7 @@
                         ".$data['address']."
                         </div>
                     </div>
+                
                   
                 <div onclick=\"location.href = 'change_profile.php';\"  class=\"mt-5 text-center\"><button class=\"btn btn-primary profile-button\" type=\"button\">Edit Profile</button></div>
                 
