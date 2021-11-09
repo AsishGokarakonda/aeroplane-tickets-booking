@@ -1,55 +1,13 @@
-<?php
-	session_start();
-?>
-<!-- <html>
-	<head>
-		<title>
-			Welcome Administrator
-		</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css"/>
-		<link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
-	</head>
-	<body>
-		<img class="logo" src="images/shutterstock_22.jpg"/> 
-		<h1 id="title">
-			IRCTC Airways	</h1>
-		<div>
-			<ul>
-				<li><a href="admin_homepage.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-				<li><a href="admin_homepage.php"><i class="fa fa-desktop" aria-hidden="true"></i> Dashboard</a></li>
-				<li><a href="logout_handler.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
-			</ul>
-		</div>
-		<h2>Welcome Administrator!</h2>
-		<table cellpadding="5">
-			
-			<tr>
-				<td class="admin_func"><a href="admin_view_booked_tickets.php"><i class="fa fa-plane" aria-hidden="true"></i> View List of Booked Tickets for a Flight</a>
-				</td>
-			</tr>
-			<tr>
-				<td class="admin_func"><a href="add_flight_details.php"><i class="fa fa-plane" aria-hidden="true"></i> Add Flight Schedule Details</a>
-				</td>
-			</tr>
-			<!-- <tr>
-				<td class="admin_func"><a href="modify_flight_details.php"><i class="fa fa-plane" aria-hidden="true"></i> Modify Flight Schedule Details</a>
-				</td>
-			</tr>
-			
-		</table>
-	</body>
-</html> -->
 
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <!-- basic -->
+<head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <!-- mobile metas -->
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <title>Admin Home</title>
+      <title>About Us</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -91,15 +49,15 @@
                              <li class="nav-item">
                                 <a class="nav-link" href="index.php">Home</a>
                              </li>
-						         <li class="nav-item">
-                              <a class="nav-link" href="#">Log Out</a>
-                           </li>
+							         <li class="nav-item">
+                              <a class="nav-link" href="book_tickets.php">Book Tickets</a>
+                              </li>
                              <li class="nav-item">
-                              <a class="nav-link" href="aboutus.php">About Us</a>
-                           </li>
+                              <a class="nav-link" href="Aboutus.php">About Us</a>
+                              </li>
 
                           </ul>
-                          <div class="sign_btn"><a href="#"><img src="./Formcss/Images/profileIcon2.png" alt=""></a></div>
+                          <div class="sign_btn"><a href="profileview.php"><img src="./Formcss/Images/profileIcon2.png" alt=""></a></div>
                        </div>
                     </nav>
                  </div>
@@ -114,41 +72,44 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-						<h2>Welcome To Our FlightJet Airline Management Admin</h2>
-					
-                     <!-- <h2>Welcome To Our FlightJet Airline Management</h2> -->
-                     <span>You Can Do The Following Things From Here.</span>
+
+                     <h2>Welcome To About us page</h2>
+                     <span>You Can Know Our Details From Here</span>
                   </div>
                </div>
             </div>
             <div class="row">
                <div class="col-md-4">
-                  <div class="Our_box" style="background-color:#9cece8;">
-                     <i><img src="./Formcss/Images/flightseats.jpg" alt="#"/></i>
-                     <h4>View The List Of Booked Flight Tickets Of A Particular Flight</h4>
-					 <a href="admin_view_booked_tickets.php" class="btn btn-primary" style="margin-top:20px;">View Now</a>
+                  <div class="Our_box" style="background-color:#e1e1bd;">
+                     <i><img src="./Formcss/Images/monuKS.jpeg" alt="#"/></i>
+                     <h4>Name: Monu Kumar Soyal</h4>
+                     <h4>Roll No: 200010029</h4>
+                     <h4>Email Id: 200010029@iitdh.ac.in</h4>
+                     <h4>Contribution: Designing and things related to CSS.Working on frontend</h4>
                   </div>
-
                </div>
                <div class="col-md-4">
-                  <div class="Our_box" style="background-color:#fdfd37;">
-                     <i><img src="./Formcss/Images/reservationConfirm.jpg" alt="#"/></i>
-                     <h4>Add Flight Schedule Details</h4>
-					 <a href="add_flight_details.php" class="btn btn-primary" style="margin-top:20px">Add Now</a>
+                  <div class="Our_box" style="background-color:#e1e1bd;">
+                     <i><img src="./Formcss/Images/asishG.jpg" alt="#"/></i>
+                     <h4>Name: Gokarakonda Sri Sai Asish</h4>
+                     <h4>Roll No: 200010017</h4>
+                     <h4>Email Id: 200010017@iitdh.ac.in</h4>
+                     <h4>Contribution: All things related to mysql,php.Working on backend</h4>
                   </div>
                </div>
                
                <div class="col-md-4">
-                 <div class="Our_box" style="background-color:#ff1a1a;" >
-                     <i><img src="./Formcss/Images/cancelbooking.jpg" alt="#"/></i>
-                     <h4>Delete Flight Schedule Details</h4>
-					 <a href="delete_flight_details.php" class="btn btn-primary" style="margin-top:20px">Delete Now</a>
-                  </div>
+                  <div class="Our_box" style="background-color:#e1e1bd;">
+                     <i><img src="./Formcss/Images/mSaiKiran.jpeg" alt="#"/></i>
+                     <h4>Name: Myla Venkata Sai Kiran</h4>
+                     <h4>Roll No: 200010031</h4>
+                     <h4>Email Id: 200010031@iitdh.ac.in</h4>
+                     <h4>Contribution : Html pages and linking them.Working on frontend</h4>
                   </div>
                </div>
-
             </div>
          </div>
+      </div>
       <!-- end Features -->
 
     <script src="Formjs/jquery.min.js"></script>

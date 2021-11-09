@@ -133,7 +133,7 @@
                              <a class="nav-link" href="index.php">Home</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="aboutus.html">About Us</a>
+                            <a class="nav-link" href="aboutus.php">About Us</a>
                          </li>
 						 <li class="nav-item">
                             <a class="nav-link" href="login_page.php">Login</a>

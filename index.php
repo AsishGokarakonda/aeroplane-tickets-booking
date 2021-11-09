@@ -96,7 +96,7 @@
               <a href="index.php" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
-              <a href="index.php" class="nav-link">About Us</a>
+              <a href="aboutus.php" class="nav-link">About Us</a>
             </li>
             <li class="nav-item">
               <a href="login_page.php" class="nav-link">Login</a>

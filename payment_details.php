@@ -20,25 +20,50 @@
     			margin: 0px 357px
 			}
 		</style>
-		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		 <link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+
+<link rel="stylesheet" href="./assets/vendor/animate/animate.css">
+
+<link rel="stylesheet" href="./assets/vendor/owl-carousel/css/owl.carousel.css">
+
+<link rel="stylesheet" href="./assets/vendor/fancybox/css/jquery.fancybox.css">
+
+<link rel="stylesheet" href="./assets/css/theme.css">
 	</head>
 	<body>
-		<img class="logo" src="images/shutterstock_22.jpg"/> 
-		<h1 id="title">
-			AADITH AIRLINES
-		</h1>
-		<div>
-			<ul>
-				<li><a href="home_page.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-				<li><a href="customer_homepage.php"><i class="fa fa-desktop" aria-hidden="true"></i> Dashboard</a></li>
-				<li><a href="home_page.php"><i class="fa fa-plane" aria-hidden="true"></i> About Us</a></li>
-				<li><a href="home_page.php"><i class="fa fa-phone" aria-hidden="true"></i> Contact Us</a></li>
-				<li><a href="logout_handler.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
-			</ul>
-		</div>
-		<form action="payment_details_form_handler.php" method="post">
-			<h2>ENTER THE PAYMENT DETAILS</h2>
+	<header>
+<nav class="navbar navbar-expand-lg navbar-light " >
+      <div class="container">
+        <a href="index.php" class="navbar-brand">Flight<span class="text-primary">jet</span></a>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarContent">
+          <ul class="navbar-nav ml-auto pt-3 pt-lg-0">
+            <li class="nav-item active">
+              <a href="customer_homepage.php" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item disabled">
+              <a href="aboutus.php" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="login_page.php" class="nav-link">Login</a>
+            </li>
+            <li class="nav-item">
+              <a href="new_user.php" class="nav-link">Sign Up</a>
+            </li>
+          </ul>
+          <div class="sign_btn" style="margin-left:40px"><a href="#"><img src="./Formcss/Images/profileIcon2.png" alt=""></a></div>
+        </div>
+      </div> <!-- .container -->
+    </nav> <!-- .navbar -->
+    </header>
+		<form style="text-align:center" action="payment_details_form_handler.php" method="post">
 			<h3 style="margin-left: 30px"><u>Payment Summary</u></h3>
 			<?php
 				$flight_no=$_SESSION['flight_no'];
@@ -111,9 +136,9 @@
 				$total_amount=$total_ticket_price+$total_meal_price+$total_discount; //$total_insurance_fee+$total_priority_checkin_fee+$total_lounge_access_fee;
 				$_SESSION['total_amount']=$total_amount;
 
-				echo "<table cellpadding=\"5\"	style='margin-left: 50px'>";
+				echo "<table cellpadding=\"10\"	>";
 				echo "<tr>";
-				echo "<td class=\"fix_table\">Base Fare, Fuel and Transaction Charges (Fees & Taxes included):</td>";
+				echo "<td>Base Fare, Fuel and Transaction Charges (Fees & Taxes included):</td>";
 				echo "<td class=\"fix_table\">&#x20b9; ".$total_ticket_price."</td>";
 				echo "</tr>";
 
@@ -139,16 +164,16 @@
 
 				echo "<tr>";
 				echo "<td class=\"fix_table\">Discount:</td>";
-				echo "<td class=\"fix_table\">&#x20b9; ".$total_discount."</td>";
+				echo "<td class=\"fix_table\"> ".$total_discount."</td>";
 				echo "</tr>";
 
 				echo "</table>";
 
 				echo "<hr style='margin-right:900px; margin-left: 50px'>";
-				echo "<table cellpadding=\"5\" style='margin-left: 50px'>";
+				echo "<table cellpadding=\"10\" style='margin-left: 50px'>";
 				echo "<tr>";
 				echo "<td class=\"fix_table\"><strong>Total:</strong></td>";
-				echo "<td class=\"fix_table\">&#x20b9; ".$total_amount."</td>";
+				echo "<td class=\"fix_table\"> ".$total_amount."</td>";
 				echo "</tr>";
 				echo "</table>";
 				echo "<hr style='margin-right:900px; margin-left: 50px'>";

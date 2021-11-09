@@ -45,7 +45,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link ">About us</a>
+                <a class="nav-link " href="aboutus.php">About us</a>
               </li>
             </ul>
 
