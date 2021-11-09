@@ -34,21 +34,21 @@
                     mysqli_connect_error());
 				if($class=='economy')
 				{
-					// $query="UPDATE Flight_Details SET seats_economy=seats_economy-? WHERE flight_no=? AND departure_date=?";
-					// $stmt=mysqli_prepare($dbc,$query);
-					// mysqli_stmt_bind_param($stmt,"iss",$no_of_pass,$flight_no,$journey_date);
-					// mysqli_stmt_execute($stmt);
-					// $affected_rows_1=mysqli_stmt_affected_rows($stmt);
-					// echo $affected_rows_1.'<br>';
-					// mysqli_stmt_close($stmt);
+					$query="UPDATE Flight_Details SET seats_economy=seats_economy-? WHERE flight_no=? AND departure_date=?";
+					$stmt=mysqli_prepare($dbc,$query);
+					mysqli_stmt_bind_param($stmt,"iss",$no_of_pass,$flight_no,$journey_date);
+					mysqli_stmt_execute($stmt);
+					$affected_rows_1=mysqli_stmt_affected_rows($stmt);
+					echo $affected_rows_1.'<br>';
+					mysqli_stmt_close($stmt);
 					// $query1="INSERT INTO `Ticket_Details` (`pnr`,`date_of_reservation`,`flight_no`,`journey_date`,`class`,`booking_status`,`no_of_passengers`,`priority_checkin`,`payment_id`) VALUES ('$pnr','$payment_date','$flight_no','$journey_date','$class','$booking_sta','$no_of_pass','$priority_check','$payment_id')";
 					$query1="INSERT INTO `Ticket_Details` (`pnr`,`date_of_reservation`,`flight_no`,`journey_date`,`class`,`booking_status`,`no_of_passengers`,`payment_id`,`customer_id`) VALUES ('$pnr','$payment_date','$flight_no','$journey_date','$class','$booking_sta','$no_of_pass','$payment_id','$customer_id')";
 					$resultquery1 = mysqli_query($dbc,$query1);
 					if($resultquery1){
-                        echo "created rey1";
+                        echo "created";
                     }
                     else{
-                       echo "rey1 error is " ;
+                       echo "error is " ;
                        echo mysqli_error($dbc);
                     }
 				}
@@ -59,13 +59,13 @@
 				// `customer_id`
 				else if($class=='business')
 				{
-					// $query="UPDATE Flight_Details SET seats_business=seats_business-? WHERE flight_no=? AND departure_date=?";
-					// $stmt=mysqli_prepare($dbc,$query);
-					// mysqli_stmt_bind_param($stmt,"iss",$no_of_pass,$flight_no,$journey_date);
-					// mysqli_stmt_execute($stmt);
-					// $affected_rows_1=mysqli_stmt_affected_rows($stmt);
-					// echo $affected_rows_1.'<br>';
-					// mysqli_stmt_close($stmt);
+					$query="UPDATE Flight_Details SET seats_business=seats_business-? WHERE flight_no=? AND departure_date=?";
+					$stmt=mysqli_prepare($dbc,$query);
+					mysqli_stmt_bind_param($stmt,"iss",$no_of_pass,$flight_no,$journey_date);
+					mysqli_stmt_execute($stmt);
+					$affected_rows_1=mysqli_stmt_affected_rows($stmt);
+					echo $affected_rows_1.'<br>';
+					mysqli_stmt_close($stmt);
 					$query2="INSERT INTO `Ticket_Details` (`pnr`,`date_of_reservation`,`flight_no`,`journey_date`,`class`,`booking_status`,`no_of_passengers`,`payment_id`,`customer_id`) VALUES ('$pnr','$payment_date','$flight_no','$journey_date','$class','$booking_sta','$no_of_pass','$payment_id','$customer_id')";
 					$resultquery2 = mysqli_query($dbc,$query2);
 					if($resultquery2){
@@ -76,13 +76,8 @@
                        echo mysqli_error($dbc);
                     }
 				}
-				// mysqli_stmt_bind_result($stmt,$cnt);
-				// mysqli_stmt_fetch($stmt);
-				// echo $cnt;
-				/*
-				$response=@mysqli_query($dbc,$query);
-				*/
-				if($resultquery1)
+
+				if($resultquery1 OR $resultquery2)
 				{
 					echo "Successfully Updated Seats<br>";
 

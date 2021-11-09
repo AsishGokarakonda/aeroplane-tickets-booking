@@ -53,6 +53,9 @@
 </header>
 <div class="container">
 <div style="text-align: center;color: #ff1ec7;font-size: 30px;">
+  Here you can see both domestic and international flights
+</div>
+<div style="text-align: center;color: #ff1ec7;font-size: 30px;">
   Enter some words to search available fligths
 </div>
 <form action="search_tickets.php" method="post" class="d-flex">

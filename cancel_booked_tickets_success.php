@@ -65,10 +65,6 @@
 		</h3>
 		<br>
 		</center>
-		<!--Following data fields were empty!
-			...
-			ADD VIEW FLIGHT DETAILS AND VIEW JETS/ASSETS DETAILS for ADMIN
-			PREDEFINED LOCATION WHEN BOOKING TICKETS
-		-->
+
 	</body>
 </html>

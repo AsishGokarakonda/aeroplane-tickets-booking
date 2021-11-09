@@ -86,7 +86,7 @@ $flightDet ="	CREATE TABLE IF NOT EXISTS `flight_details` (
   }
 
   $addFliDet = "INSERT INTO `Flight_details` (`flight_no`, `from_city`, `to_city`, `departure_date`, `arrival_date`, `departure_time`, `arrival_time`, `seats_economy`, `seats_business`, `price_economy`, `price_business`, `jet_id`) 
-  SELECT * FROM (SELECT 'AA101', 'bangalore', 'mumbai', '2021-11-01', '2021-12-02', '21:00:00', '01:00:00', '195', '96', '5000', '7500', '10001') AS tmp
+  SELECT * FROM (SELECT 'AA101', 'bangalore', 'mumbai', '2021-12-01', '2021-12-02', '21:00:00', '01:00:00', '195', '96', '5000', '7500', '10001') AS tmp
   WHERE NOT EXISTS(
     SELECT `flight_no` FROM `Flight_details` WHERE flight_no ='AA101'
   )LIMIT 1";
@@ -142,28 +142,28 @@ $flightDet ="	CREATE TABLE IF NOT EXISTS `flight_details` (
   $result6 = mysqli_query($conn,$addFliDet3);
 
   $addFliDet = "INSERT INTO `Flight_details` (`flight_no`, `from_city`, `to_city`, `departure_date`, `arrival_date`, `departure_time`, `arrival_time`, `seats_economy`, `seats_business`, `price_economy`, `price_business`, `jet_id`) 
-  SELECT * FROM (SELECT 'AIRBUS707P', 'Chennai', 'Tokyo', '2021-08-19', '2021-11-19', '00:00:00', '18:00:00', '75', '65', '6969', '7856', 'AIRBUS707') AS tmp
+  SELECT * FROM (SELECT 'AIRBUS707P', 'Chennai', 'Tokyo', '2021-12-19', '2021-12-19', '00:00:00', '18:00:00', '75', '65', '6969', '7856', 'AIRBUS707') AS tmp
   WHERE NOT EXISTS(
     SELECT `flight_no` FROM `Flight_details` WHERE flight_no ='AIRBUS707P'
   )LIMIT 1";
   $result4 = mysqli_query($conn,$addFliDet);
 
   $addFliDet = "INSERT INTO `Flight_details` (`flight_no`, `from_city`, `to_city`, `departure_date`, `arrival_date`, `departure_time`, `arrival_time`, `seats_economy`, `seats_business`, `price_economy`, `price_business`, `jet_id`) 
-  SELECT * FROM (SELECT 'AIRBUS70BA', 'mumbai', 'berlin', '2021-08-19', '2021-10-19', '10:00:00', '15:00:00', '523', '76', '4523', '8652', 'AIRBUS70') AS tmp
+  SELECT * FROM (SELECT 'AIRBUS70BA', 'mumbai', 'berlin', '2021-11-19', '2021-11-29', '10:00:00', '15:00:00', '523', '76', '4523', '8652', 'AIRBUS70') AS tmp
   WHERE NOT EXISTS(
     SELECT `flight_no` FROM `Flight_details` WHERE flight_no ='AIRBUS70BA'
   )LIMIT 1";
   $result4 = mysqli_query($conn,$addFliDet);
 
   $addFliDet = "INSERT INTO `Flight_details` (`flight_no`, `from_city`, `to_city`, `departure_date`, `arrival_date`, `departure_time`, `arrival_time`, `seats_economy`, `seats_business`, `price_economy`, `price_business`, `jet_id`) 
-  SELECT * FROM (SELECT 'AIRBUS70PA', 'bangalore', 'london', '2021-08-19', '2021-11-19', '10:01:00', '18:00:00', '498', '65', '5788', '6966', 'AIRBUS70') AS tmp
+  SELECT * FROM (SELECT 'AIRBUS70PA', 'bangalore', 'london', '2021-11-20', '2021-11-22', '10:01:00', '18:00:00', '498', '65', '5788', '6966', 'AIRBUS70') AS tmp
   WHERE NOT EXISTS(
     SELECT `flight_no` FROM `Flight_details` WHERE flight_no ='AIRBUS70PA'
   )LIMIT 1";
   $result4 = mysqli_query($conn,$addFliDet);
 
   $addFliDet = "INSERT INTO `Flight_details` (`flight_no`, `from_city`, `to_city`, `departure_date`, `arrival_date`, `departure_time`, `arrival_time`, `seats_economy`, `seats_business`, `price_economy`, `price_business`, `jet_id`) 
-  SELECT * FROM (SELECT 'BOING707PA', 'Agra', 'Paris', '2021-08-25', '2021-12-25', '10:00:00', '13:00:00', '400', '21', '4500', '7000', 'BOING707') AS tmp
+  SELECT * FROM (SELECT 'BOING707PA', 'Agra', 'Paris', '2021-11-25', '2021-11-26', '10:00:00', '13:00:00', '400', '21', '4500', '7000', 'BOING707') AS tmp
   WHERE NOT EXISTS(
     SELECT `flight_no` FROM `Flight_details` WHERE flight_no = 'BOING707PA'
   )LIMIT 1";

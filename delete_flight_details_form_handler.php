@@ -43,15 +43,7 @@
 					mysqli_stmt_bind_param($stmt,"ss",$flight_no,$departure_date);
 					mysqli_stmt_execute($stmt);
 					$affected_rows=mysqli_stmt_affected_rows($stmt);
-					//echo $affected_rows."<br>";
-					// mysqli_stmt_bind_result($stmt,$cnt);
-					// mysqli_stmt_fetch($stmt);
-					// echo $cnt;
 					mysqli_stmt_close($stmt);
-					// mysqli_close($dbc);
-					/*
-					$response=@mysqli_query($dbc,$query);
-					*/
 					if($affected_rows==1)
 					{
 						echo "Successfully Deleted";

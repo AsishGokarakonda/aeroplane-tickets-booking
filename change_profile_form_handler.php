@@ -101,20 +101,12 @@
 				}
             }
             
-            // echo $change_name;
-            // echo $change_email;
-            // echo $change_address;
-            // echo $change_phone;
-            // echo $change_passport;
 
 				if(empty($data_missing))
 				{
-					// echo"heelo";
 
-					// require_once('Database Connection file/mysqli_connect.php');
 					$query="UPDATE `customer` SET `name`='$change_name',`email`='$change_email',`phone_no`='$change_phone',`address`='$change_address',`passport`='$change_passport'";
 					$result=mysqli_query($dbc,$query);
-                    // echo $result;
 					if ( false===$result ) {
 						printf("error: %s\n", mysqli_error($dbc));
 					  }
@@ -129,19 +121,7 @@
 						mysqli_close($dbc);
 					}
 				}
-			// 	else
-			// 	{
-			// 		echo "The following data fields were empty! <br>";
-			// 		foreach($data_missing as $missing)
-			// 		{
-			// 			echo $missing ."<br>";
-			// 		}
-			// 	}
-			
-			// else
-			// {
-			// 	echo "Submit request not received";
-			// }
+
 		?>
 	</body>
 </html>

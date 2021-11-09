@@ -82,10 +82,6 @@
 			<input class="toggle btn btn-primary" type="submit" value="Cancel Ticket" name="Cancel_Ticket">
 			</center>
 		</form>
-		<!--Following data fields were empty!
-			...
-			ADD VIEW FLIGHT DETAILS AND VIEW JETS/ASSETS DETAILS for ADMIN
-			PREDEFINED LOCATION WHEN BOOKING TICKETS
-		-->
+
 	</body>
 </html>

@@ -67,7 +67,6 @@
 
 				if(empty($data_missing))
 				{
-					// echo"heelo";
                     DEFINE('DB_USER','root');
                     DEFINE('DB_PASSWORD','');
                     DEFINE('DB_HOST','localhost');
@@ -77,7 +76,6 @@
                     OR dies('Could not connect to MySQL:' .
                         mysqli_connect_error());
 
-					// require_once('Database Connection file/mysqli_connect.php');
 					$query="INSERT INTO `customer` (`customer_id`,`pwd`,`name`,`email`,`phone_no`,`address`,`passport`) VALUES ('$user_name','$password','$name','$email_id','$phone_no','$address','$passport')";
 					$result=mysqli_query($dbc,$query);
 					if ( false===$result ) {

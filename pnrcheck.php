@@ -122,16 +122,7 @@ $result = mysqli_query($con,"SELECT * FROM passengers WHERE pnr='".$_SESSION['us
                     $picfile_path ='images/';
                     
                     $result1 = mysqli_query($con,"SELECT * FROM passengers where ='".$_SESSION['user']."'");
-                        
-                    
-                    
-                    // while($row1 = mysqli_fetch_array($result1))
-                    //   {                  
-                    //     $picsrc=$picfile_path.$row1['s_pic'];
-                        
-                    //     echo "<center><img src='images/shutterock_2.jpg' class='img-thumbnail' width='180px' style='height:180px;'></center>";
-                    //     echo"<div>";
-                    //   }
+
                    ?>
                         </td>
 

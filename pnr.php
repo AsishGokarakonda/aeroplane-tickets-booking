@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// $con=mysqli_connect("localhost","root","","airline_reservation");
 DEFINE('DB_USER','root');
 DEFINE('DB_PASSWORD','');
 DEFINE('DB_HOST','localhost');
@@ -38,9 +37,7 @@ if(isset($_REQUEST["u_sub"]))
    else
    {
     echo $res;
-    // echo '<script>';
-    // echo 'alert("Please enter correct PNR")';
-    // echo '</script>';
+
    }
 if($res0)
    {

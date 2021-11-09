@@ -71,7 +71,6 @@
 				$_SESSION['payment_date']=$payment_date;
 
 
-				// require_once('Database Connection file/mysqli_connect.php');
                 DEFINE('DB_USER','root');
                 DEFINE('DB_PASSWORD','');
                 DEFINE('DB_HOST','localhost');
@@ -118,21 +117,6 @@
 				echo "<td class=\"fix_table\">&#x20b9; ".$total_meal_price."</td>";
 				echo "</tr>";
 
-				// echo "<tr>";
-				// echo "<td class=\"fix_table\">Priority Checkin Fees:</td>";
-				// echo "<td class=\"fix_table\">&#x20b9; ".$total_priority_checkin_fee."</td>";
-				// echo "</tr>";
-
-				// echo "<tr>";
-				// echo "<td class=\"fix_table\">Lounge Access Fees:</td>";
-				// echo "<td class=\"fix_table\">&#x20b9; ".$total_lounge_access_fee."</td>";
-				// echo "</tr>";
-
-				// echo "<tr>";
-				// echo "<td class=\"fix_table\">Insurance Fees:</td>";
-				// echo "<td class=\"fix_table\">&#x20b9; ".$total_insurance_fee."</td>";
-				// echo "</tr>";
-
 				echo "<tr>";
 				echo "<td class=\"fix_table\">Discount:</td>";
 				echo "<td class=\"fix_table\"> ".$total_discount."</td>";
@@ -165,14 +149,6 @@
 			<br>
 			<input type="submit" value="Pay Now" name="Pay_Now">
 		</form>
-		<!-- 
-•	Booking_Status
-•	Payment_ID -->
 
-		<!--Following data fields were empty!
-			...
-			ADD VIEW FLIGHT DETAILS AND VIEW JETS/ASSETS DETAILS for ADMIN
-			PREDEFINED LOCATION WHEN BOOKING TICKETS
-		-->
 	</body>
 </html>

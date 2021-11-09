@@ -55,7 +55,6 @@
 			$thirty_days_before_date=date_format($thirty_days_before_date,"Y-m-d");
 			
 			$customer_id=$_SESSION['login_user'];
-			// require_once('Database Connection file/mysqli_connect.php');
             DEFINE('DB_USER','root');
                 DEFINE('DB_PASSWORD','');
                 DEFINE('DB_HOST','localhost');

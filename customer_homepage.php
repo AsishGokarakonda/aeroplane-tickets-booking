@@ -82,7 +82,6 @@
 						$temp =$_SESSION['login_user'];
 						echo "<h2>Welcome To Our FlightJet Airline Management ".$temp."</h2>";
 					?>
-                     <!-- <h2>Welcome To Our FlightJet Airline Management</h2> -->
                      <span>You Can Do The Following Things From Here</span>
                   </div>
                </div>

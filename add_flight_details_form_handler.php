@@ -126,14 +126,6 @@
                     OR dies('Could not connect to MySQL:' .
                         mysqli_connect_error());
 
-					$query="SELECT count(*) FROM Jet_Details WHERE jet_id=? and active='Yes'";
-					$stmt=mysqli_query($dbc,$query);
-					// mysqli_stmt_bind_param($stmt,"s",$jet_id);
-					// mysqli_stmt_execute($stmt);
-					// mysqli_stmt_bind_result($stmt,$cnt);
-					// mysqli_stmt_fetch($stmt);
-					// mysqli_stmt_close($stmt);
-
 					if($cnt==1)
 					{
 						$query="INSERT INTO Flight_Details (flight_no,from_city,to_city,departure_date,arrival_date,departure_time,arrival_time,seats_economy,seats_business,price_economy,price_business,jet_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
