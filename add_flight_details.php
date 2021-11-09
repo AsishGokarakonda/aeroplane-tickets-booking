@@ -171,13 +171,9 @@
               <a href="aboutus.php" class="nav-link">About Us</a>
             </li>
             <li class="nav-item">
-              <a href="login_page.php" class="nav-link">Login</a>
-            </li>
-            <li class="nav-item">
-              <a href="new_user.php" class="nav-link">Sign Up</a>
+              <a href="logout.php" class="nav-link">Logout</a>
             </li>
           </ul>
-          <div class="sign_btn" style="margin-left:40px"><a href="#"><img src="./Formcss/Images/profileIcon2.png" alt=""></a></div>
         </div>
       </div> <!-- .container -->
     </nav> <!-- .navbar -->

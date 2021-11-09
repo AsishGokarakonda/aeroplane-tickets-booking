@@ -57,7 +57,6 @@
                               </li>
 
                           </ul>
-                          <div class="sign_btn"><a href="profileview.php"><img src="./Formcss/Images/profileIcon2.png" alt=""></a></div>
                        </div>
                     </nav>
                  </div>

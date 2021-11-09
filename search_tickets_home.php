@@ -53,10 +53,10 @@
 </header>
 <div class="container">
 <div style="text-align: center;color: #ff1ec7;font-size: 30px;">
-  Enter some words to search in the flight
+  Enter some words to search available fligths
 </div>
 <form action="search_tickets.php" method="post" class="d-flex">
-        <input class="form-control me-2" name="searchname" type="search" placeholder="Search" aria-label="Search" required>
+        <input class="form-control me-2" name="searchname" type="search" placeholder="Search (Case-sensitive)" aria-label="Search" required>
         <button class="btn btn-outline-success" style="margin-bottom:50px"  type="submit">Search</button>
 </form>
 <?php

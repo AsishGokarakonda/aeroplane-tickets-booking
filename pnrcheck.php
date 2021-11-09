@@ -15,77 +15,66 @@ $no_of_passengers= $n['no_of_passengers'];
 $payment_id= $n['payment_id'];
 $customer_id= $n['customer_id'];
 
-
-
-
-$id=$_SESSION['user'];
-
-$result = mysqli_query($con,"SELECT * FROM passengers WHERE pnr='".$_SESSION['user']."'");
-                    
-                    while($row = mysqli_fetch_array($result))
-                      {
-?>
+echo "
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">
         <title>Print ticket</title>
         
-         <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-         <link rel="stylesheet" href="bootstrap/bootstrap-theme.min.css">
-         <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-         <link rel="stylesheet" href="bootstrap/bootstrap-theme.min.css">
-         <link rel="stylesheet" type="text/css" href="css/style.css"/>
-		<link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+         <link rel=\"stylesheet\" href=\"bootstrap/bootstrap.min.css\">
+         <link rel=\"stylesheet\" href=\"bootstrap/bootstrap-theme.min.css\">
+         <link rel=\"stylesheet\" href=\"bootstrap/bootstrap.min.css\">
+         <link rel=\"stylesheet\" href=\"bootstrap/bootstrap-theme.min.css\">
+         <link rel=\"stylesheet\" type=\"text/css\" href=\"css/style.css\"/>
+		<link rel=\"stylesheet\" href=\"font-awesome-4.7.0\css\font-awesome.min.css\">
+		<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU\" crossorigin=\"anonymous\">
+    <link rel=\"stylesheet\" href=\"./assets/css/bootstrap.css\">
   
-  <link rel="stylesheet" href="./assets/css/maicons.css">
+  <link rel=\"stylesheet\" href=\"./assets/css/maicons.css\">
 
-  <link rel="stylesheet" href="./assets/vendor/animate/animate.css">
+  <link rel=\"stylesheet\" href=\"./assets/vendor/animate/animate.css\">
 
-  <link rel="stylesheet" href="./assets/vendor/owl-carousel/css/owl.carousel.css">
+  <link rel=\"stylesheet\" href=\"./assets/vendor/owl-carousel/css/owl.carousel.css\">
 
-  <link rel="stylesheet" href="./assets/vendor/fancybox/css/jquery.fancybox.css">
+  <link rel=\"stylesheet\" href=\"./assets/vendor/fancybox/css/jquery.fancybox.css\">
 
-  <link rel="stylesheet" href="./assets/css/theme.css">
-       <script src="bootstrap/jquery.min.js"></script>
-        <script src="bootstrap/bootstrap.min.js"></script>  
-       <script src="bootstrap/jquery.min.js"></script>
-        <script src="bootstrap/bootstrap.min.js"></script>
-        <link type="text/css" rel="stylesheet" href="css/admform.css"></link>
+  <link rel=\"stylesheet\" href=\"./assets/css/theme.css\">
+       <script src=\"bootstrap/jquery.min.js\"></script>
+        <script src=\"bootstrap/bootstrap.min.js\"></script>  
+       <script src=\"bootstrap/jquery.min.js\"></script>
+        <script src=\"bootstrap/bootstrap.min.js\"></script>
+        <link type=\"text/css\" rel=\"stylesheet\" href=\"css/admform.css\"></link>
         
-        <script type="text/javascript">
+        <script type=\"text/javascript\">
             function printpage()
             {
-            var printButton = document.getElementById("print");
+            var printButton = document.getElementById(\"print\");
             printButton.style.visibility = 'hidden';
             window.print()
              printButton.style.visibility = 'visible';
              }
         </script>
-        
-        
     </head>
     <body>
     <header>
-<nav class="navbar navbar-expand-lg navbar-light " >
-      <div class="container">
-        <a href="index.php" class="navbar-brand">Flight<span class="text-primary">jet</span></a>
+<nav class=\"navbar navbar-expand-lg navbar-light \" >
+      <div class=\"container\">
+        <a href=\"index.php\" class=\"navbar-brand\">Flight<span class=\"text-primary\">jet</span></a>
 
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class=\"navbar-toggler\" data-toggle=\"collapse\" data-target=\"#navbarContent\" aria-controls=\"navbarContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+          <span class=\"navbar-toggler-icon\"></span>
         </button>
 
-        <div class="navbar-collapse collapse" id="navbarContent">
-          <ul class="navbar-nav ml-auto pt-3 pt-lg-0">
-            <li class="nav-item active">
-              <a href="customer_homepage.php" class="nav-link">Home</a>
+        <div class=\"navbar-collapse collapse\" id=\"navbarContent\">
+          <ul class=\"navbar-nav ml-auto pt-3 pt-lg-0\">
+            <li class=\"nav-item active\">
+              <a href=\"customer_homepage.php\" class=\"nav-link\">Home</a>
             </li>
-            <li class="nav-item disabled">
-              <a href="aboutus.php" class="nav-link">About Us</a>
+            <li class=\"nav-item disabled\">
+              <a href=\"aboutus.php\" class=\"nav-link\">About Us</a>
             </li>
           </ul>
-          <div class="sign_btn" style="margin-left:40px"><a href="profileview.php"><img src="./Formcss/Images/profileIcon2.png" alt=""></a></div>
+          <div class=\"sign_btn\" style=\"margin-left:40px\"><a href=\"profileview.php\"><img src=\"./Formcss/Images/profileIcon2.png\" alt=\"\"></a></div>
         </div>
       </div> <!-- .container -->
     </nav> <!-- .navbar -->
@@ -96,35 +85,19 @@ $result = mysqli_query($con,"SELECT * FROM passengers WHERE pnr='".$_SESSION['us
 <br>
 <br>
 <br>
-<td style="width:4%;"> <font style="font-family: Verdana;">PNR : </font> </td>
-                    <td style="width:8%;" colspan="3"> <?php echo $id;?> </td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<td style="width:4%;"> <font style="font-family: Verdana;">Flight No : </font> </td>
-                    <td style="width:8%;" colspan="3"> <?php echo $flight_no;?> </td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<td style="width:4%;"> <font style="font-family: Verdana;">Date of journey : </font> </td>
-                    <td style="width:8%;" colspan="3"> <?php echo $journey_date;?> </td><br>
-<td style="width:4%;"> <font style="font-family: Verdana;">Class : </font> </td>
-                    <td style="width:8%;" colspan="3"> <?php echo $class;?> </td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<td style="width:4%;"> <font style="font-family: Verdana;">Payment ID : </font> </td>
-                    <td style="width:8%;" colspan="3"> <?php echo $payment_id;?> </td><br>
 
-<!-- <td style="width:4%;"> <font style="font-family: Verdana;">Lounge Access : </font> </td>
-                    <td style="width:8%;" colspan="3"> <?php echo $lounge_access;?> </td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<td style="width:4%;"> <font style="font-family: Verdana;">Priority Checkin : </font> </td>
-                    <td style="width:8%;" colspan="3"> <?php echo $priority_checkin;?> </td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<td style="width:4%;"> <font style="font-family: Verdana;">Insurance : </font> </td> -->
-                    <!-- <td style="width:8%;" colspan="3"> <?php echo $insurance;?> </td><br> -->
+";
 
-<td style="width:4%;"> <font style="font-family: Verdana;">Booked By (Username) : </font> </td>
-                    <td style="width:8%;" colspan="3"> <?php echo $customer_id;?> </td><br>
-<td style="width:4%;"> <font style="font-family: Verdana;">Status: </font> </td>
-                    <td style="width:58%;" colspan="3"> <?php echo $booking_status;?> </td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<td style="width:4%;"> <font style="font-family: Verdana;">No. of Passengers: </font> </td>
-                    <td style="width:58%;" colspan="3"> <?php echo $no_of_passengers;?> </td>
 
-    
-   
-        </div>
-<!-- <center><img src='images/maxx.jpg' class='img-thumbnail' width='1200px' style='height:80px;'></center>"; -->
+$id=$_SESSION['user'];
+
+$result = mysqli_query($con,"SELECT * FROM passengers WHERE pnr='".$_SESSION['user']."'");
+                   
+                    while($row = mysqli_fetch_array($result))
+                      {
+                        ?> 
+
+
          
   <div class="container-fluid">
                             <div class="row">
@@ -166,8 +139,23 @@ $result = mysqli_query($con,"SELECT * FROM passengers WHERE pnr='".$_SESSION['us
                  <td style="width:4%;"> <font style="font-family: Verdana;">PNR : </font> </td>
                     <td style="width:8%;" colspan="3"> <?php echo $stname;?> </td>
                  </tr>
-                 
-                 
+
+                 <tr>
+                    <td> <font style="font-family: Verdana;">Booking Status </font> </td>
+                    <td colspan="3"> <?php echo ''. $booking_status. '   ' ?>
+                </tr>
+                <tr>
+                    <td> <font style="font-family: Verdana;">Flight Number </font> </td>
+                    <td colspan="3"> <?php echo ''. $flight_no. '   ' ?>
+                </tr>
+                <tr>
+                    <td> <font style="font-family: Verdana;">Flight Number </font> </td>
+                    <td colspan="3"> <?php echo ''. $class. '   ' ?>
+                </tr>
+                <tr>
+                    <td> <font style="font-family: Verdana;">Date of Journey</font> </td>
+                    <td colspan="3"> <?php echo ''.$journey_date. '   ' ?>
+                </tr>
                 <tr>
                     <td> <font style="font-family: Verdana;">Passenger No : </font> </td>
                     <td colspan="3"> <?php echo ''. $row[0]. '   ' ?>
@@ -176,9 +164,14 @@ $result = mysqli_query($con,"SELECT * FROM passengers WHERE pnr='".$_SESSION['us
                   <tr>
                     <td > <font style="font-family: Verdana;"> Name</font>  </td>
                     <td colspan="3"> <?php echo ''. $row[2]. '   ' ?><br>
-                    <?php echo ' Age - '.$row[3] ?></td>
+                   </td>
                   </tr>
                 
+                  <tr>
+                    <td><font style="font-family: Verdana;"> Age</font></td>
+                    <td  colspan="3"> <?php echo ''.$row[3]. '   '  ?> </td>
+                   </tr>
+
                   <tr>
                     <td><font style="font-family: Verdana;"> Gender</font></td>
                     <td  colspan="3"><?php echo $row[4] ?> </td>
@@ -187,6 +180,14 @@ $result = mysqli_query($con,"SELECT * FROM passengers WHERE pnr='".$_SESSION['us
                   <tr>
                     <td> <font style="font-family: Verdana;">Meal Choice</font></td>
                     <td> <?php echo $row[5] ?></td>
+                </tr>
+                <tr>
+                    <td> <font style="font-family: Verdana;">Booked by (Username)</font></td>
+                    <td> <?php echo $customer_id ?></td>
+                </tr>
+                <tr>
+                    <td> <font style="font-family: Verdana;">Payment Id</font></td>
+                    <td> <?php echo $payment_id ?></td>
                 </tr>
                 <tr>
                     <td><font style="font-family: Verdana;"> Frequent Flier No. (If any)</font></td>

@@ -39,7 +39,7 @@ if(isset($_REQUEST["u_sub"]))
    {
     echo $res;
     // echo '<script>';
-    // echo 'alert("Invalid username or password")';
+    // echo 'alert("Please enter correct PNR")';
     // echo '</script>';
    }
 if($res0)
@@ -51,7 +51,7 @@ if($res0)
    {
     
     echo '<script>';
-    echo 'alert("Invalid username or password")';
+    echo 'alert("Please enter correct PNR")';
     echo '</script>';
    }
 
@@ -62,13 +62,7 @@ if($res0)
     $_SESSION['user']=$id;
     header('location:pnrcheck.php');
    }
-   else
-   {
-    
-    echo '<script>';
-    echo 'alert("Invalid username or password")';
-    echo '</script>';
-   }
+ 
   }
  else
  {

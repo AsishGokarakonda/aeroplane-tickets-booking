@@ -163,7 +163,7 @@ $flightDet ="	CREATE TABLE IF NOT EXISTS `flight_details` (
   $result4 = mysqli_query($conn,$addFliDet);
 
   $addFliDet = "INSERT INTO `Flight_details` (`flight_no`, `from_city`, `to_city`, `departure_date`, `arrival_date`, `departure_time`, `arrival_time`, `seats_economy`, `seats_business`, `price_economy`, `price_business`, `jet_id`) 
-  SELECT * FROM (SELECT 'BOING707PA', 'KOLKATTA', 'PATNA', '2021-08-25', '2021-12-25', '10:00:00', '13:00:00', '400', '21', '4500', '7000', 'BOING707') AS tmp
+  SELECT * FROM (SELECT 'BOING707PA', 'Agra', 'Paris', '2021-08-25', '2021-12-25', '10:00:00', '13:00:00', '400', '21', '4500', '7000', 'BOING707') AS tmp
   WHERE NOT EXISTS(
     SELECT `flight_no` FROM `Flight_details` WHERE flight_no = 'BOING707PA'
   )LIMIT 1";

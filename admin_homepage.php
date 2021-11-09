@@ -92,14 +92,13 @@
                                 <a class="nav-link" href="index.php">Home</a>
                              </li>
 						         <li class="nav-item">
-                              <a class="nav-link" href="#">Log Out</a>
+                              <a class="nav-link" href="logout.php">Log Out</a>
                            </li>
                              <li class="nav-item">
                               <a class="nav-link" href="aboutus.php">About Us</a>
                            </li>
 
                           </ul>
-                          <div class="sign_btn"><a href="#"><img src="./Formcss/Images/profileIcon2.png" alt=""></a></div>
                        </div>
                     </nav>
                  </div>
