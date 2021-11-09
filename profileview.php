@@ -149,6 +149,7 @@
                 
                   
                 <div onclick=\"location.href = 'change_profile.php';\"  class=\"mt-5 text-center\"><button class=\"btn btn-primary profile-button\" type=\"button\">Edit Profile</button></div>
+                <a  href=\"logout.php\" class=\"mt-5 text-center\"><button class=\"btn btn-danger profile-button\" type=\"button\">Log Out</button></a>
                 
             </div>
         </div>
